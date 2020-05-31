@@ -11,31 +11,6 @@ function initScrollFunction(){
 
     imageShuffle();//shuffle html img tags
 
- 
-        //assign image arrays again after having been shuffled
-        //mainImg class variables//all are converted to arrays
-//        mainImgCyberPunk = document.querySelectorAll(".mainImgCyberPunk");
-//        mainImgCyberPunk = Array.prototype.slice.call(mainImgCyberPunk);
-//        mainImgRetro = document.querySelectorAll(".mainImgRetro");
-//        mainImgRetro = Array.prototype.slice.call(mainImgRetro);
-//        mainImgVaporWave = document.querySelectorAll(".mainImgVaporWave");
-//        mainImgVaporWave = Array.prototype.slice.call(mainImgVaporWave);
-        //fbImg class variables//all are converted to arrays
-
-//        fbImgCyberPunk = document.querySelectorAll(".fbImgCyberPunk");
-//        fbImgCyberPunk = Array.prototype.slice.call(fbImgCyberPunk);
-//        fbImgRetro = document.querySelectorAll(".fbImgRetro");
-//        fbImgRetro = Array.prototype.slice.call(fbImgRetro);
-//        fbImgVaporWave = document.querySelectorAll(".fbImgVaporWave");
-//        fbImgVaporWave = Array.prototype.slice.call(fbImgVaporWave);
-//
-//        pImgCyberPunk = document.querySelectorAll(".pImgCyberPunk");
-//        pImgCyberPunk = Array.prototype.slice.call(pImgCyberPunk);
-//        pImgRetro = document.querySelectorAll(".pImgRetro");
-//        pImgRetro = Array.prototype.slice.call(pImgRetro);
-//        pImgVaporWave = document.querySelectorAll(".pImgVaporWave");
-//        pImgVaporWave = Array.prototype.slice.call(pImgVaporWave);
-
         //hide all images
         comViewWorkingArray = [];
         displayNoneAllImgs();
