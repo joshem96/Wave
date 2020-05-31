@@ -48,7 +48,6 @@
                     
                     //if movie mode is already running, switch it to faceboook-pintrest mode
                     if (movieModeImg.classList.contains("a")){
-//                        clearInterval(winScroll);
                         speed = 18;
                         ScrollFunction();
                     }
