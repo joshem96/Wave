@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>WAVE SOCIAL</title>
-        <link rel="stylesheet" href="Wave%20CSS.css">
+        <link rel="stylesheet" href="Wave_CSS.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
@@ -245,14 +245,22 @@
 		<!-- ARROW AREA SPACE THE SITS ABOVE MAIN INFO PIC-->
 			<div class = "infoPicControlsColumn" style = "padding-bottom: 8px;">
 				<nav class = "infoPicControlsRow" id="infoNavigationRow">
-					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo" onclick = "quickClickAudioFunction()">
+<!--					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo infoNavElement displayNone" onclick = "quickClickAudioFunction()">-->
 
             		<p style="margin-left:6px;" id="exitInfo" class="iconHover infoNavElement" onclick="tabCloseSoundAudioFunction()"><strong>X</strong></p>
+
+					<img src="Photos/Tool Photos/MenuIconTwo.png" class="iconHoverTwo infoNavElement" id="infoMenuIcon" onclick = "quickClickAudioFunction()">
+
+                    <nav id="infoMenuNav" class="infoNavElement">
+                        <span id="menuOptionAbout" class="infoMenuElement menuElementSelected">About</span>
+                        <span id="menuOptionInstructions" class="infoMenuElement">Instructions</span>
+                        <span id="menuOptionContact" class="infoMenuElement">Contact</span>
+                    </nav>
 				</nav>
 			</div>
 
 		<!--ABOUT THE PAGE-->
-			<div class = "infoPicAbout displayNone">
+			<div class = "infoPicAbout">
 				<p><span class = "infoDescription" >    
 				Wavefm is a photo viewing platform which consists purely of vaporwave, cyberpunk and retro images. </span><br>
 				<span class = "infoEnjoy">Enjoy the journey</span> <br>
@@ -304,7 +312,7 @@
             </div>
 
         <!-- CONTACT US -->
-            <div id="contactUsContainer">
+            <div id="contactUsContainer" class ="displayNone">
                 <h1 class="contactFont"> Contact us.</h1>
                 <p style="font-size: 3em;">Feel free to emails us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
                 <div id="socialMediaLinksWrap">
