@@ -1,0 +1,662 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>WAVE SOCIAL</title>
+        <link rel="stylesheet" href="Wave%20CSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <style id="preferences"></style>
+        <style id="clear-select-all"></style>
+    </head>
+    <STYLE>A, input{text-decoration: none;} div{margin: 0; padding: 0;}.search-box:focus{outline: none;}</STYLE>
+<body>
+<!--<script src="Javascript/Wave%20JS%2025.03.2020.js"></script>-->
+
+<div id = "topScreen" ></div>
+
+<div id = "background"></div>
+<!--HEADERBAR-->
+<div class = "newHeaderWrap positionFix">
+<!--    <div class="page-head" style ="top:0; position: fixed; background-color: rebeccapurple;"></div>-->
+    <header class="page-head" style ="top:0; position: fixed;" >
+
+<!--LEFTSIDE MAIN LOGO-->
+        <a href = "#topScreen">
+            <div class="waveFm iconHover visibilityNone" onclick="normalClickAudioFunction()">wavefm</div>
+            <audio class = "normalClick"><source src="" type="audio/WAV"></audio>
+        </a>
+
+
+<!--SEARCHBOX-->
+            <form class="search-form">
+                <input type="text" class="search-box" placeholder="Search " onsubmit="return false">
+            </form>
+
+<!--WINDOW ICON SECTION-->
+
+    <!--DISPLAY ICON-->
+
+                    <div class = "iconWrap userSelectNone">
+                        <div class = "displaySection normalClick  iconMargin iconHover navIcon displayButton" onclick="normalClickAudioFunction()">
+
+                        <audio class = "normalClickAudio" > <source src="Sound_Related/Button_Clicks/ButtonEject_Four.wav" type="audio/WAV"></audio>
+
+                            <a>
+                                <img src = "Photos/Tool Photos/display grey.png" class = "displayImg" title = "change photo display">
+                            </a>
+                    </div>
+
+    <!-- TAB BUTTONS -->
+
+        <!--PREFERANCE ICON-->
+                            <div class = "tabButtons" style="display: inline-flex;">
+                                <div class = "iconMargin iconHover navIcon preferencesButton off " title = "photo preferance" >
+                                    <a>
+
+                                    <audio class = "openSound"> <source src="Sound_Related/Button_Clicks/OnOffToggle_On_One.Two.wav" type="audio/WAV"></audio>
+                                    <audio class = "closeSound"> <source src="Sound_Related/Button_Clicks/OnOffToggle_Off_One.wav" type="audio/WAV"></audio>
+
+                                        <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon" id="preferencesButton" >
+                                    </a>
+                                </div>
+
+        <!--MOVIE ICON-->
+                                <div class = "movieModeTab iconMargin iconHover navIcon movieModeButton off" title = "movie mode" > 
+
+                                    <audio class = "tabSound"> <source src="Sound_Related/Button_Clicks/ButtonEject_One.Two.wav" type="audio/WAV"></audio>
+
+                                    <a>
+                                        <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b " id="movieModeButton" >
+                                    </a>
+                                </div>
+
+    <!-- SOUND ICON-->
+                                <div class = " iconMargin iconHover navIcon soundControlButton off" title = "sound control" > 
+
+                                    <audio class = "tabSound"> <source src="Sound_Related/Button_Clicks/ButtonEject_One.Two.wav" type="audio/WAV"></audio>
+
+                                    <a>
+                                        <img src = "Photos/Tool Photos/soundControl.png" class = "soundControlIcon" id="soundControlButton" >
+                                    </a>
+                                </div>
+
+                            </div>
+
+    <!--INFO ICON-->
+                        <div class = "iconMargin iconHover navIconTwo infoButton off" title = "information about wavefm">
+
+    <!--						<audio class = "normalClick"> <source src="" type="audio/WAV"></audio>-->
+
+                            <a>
+                               <img src ="Photos/Tool Photos/info.png" class = "infoPic" style = "margin-right: 10px;">
+                            </a>
+                        </div>
+                    </div>
+
+                    <img src = "Photos/Tool Photos/wave bar line new.png" id = "waveLine" class = "positionFix">
+
+    </header>
+<!--PREFERANCE CHECKBOX-->
+            <div class = "dnPrefContainer displayNone">
+                <div class = "prefContainer userSelectNone">
+                    
+					<div class = "preferenceCheckbox">	
+							<audio class="quickClickAudio"><source src="Sound_Related/Button_Clicks/quickClick_ButtonEject_Three.wav" type="audio/WAV"></audio>
+                        <div class ="formBox adaptiveFormBox comViewOff">
+
+<!--                          <label for="retro">-->
+    <!--                              <input type="checkbox" id = "retroCB" value=".mainImgRetro" class="formCheckBox retroCB" onclick="quickClickAudioFunction()">-->
+
+                                  <div class = "fakeCheckBoxWrap">
+                                      <div class="formCheckBoxBorder">
+                                          <div class="formCheckBox newCheckBox retroCB unchecked" id="retro" onclick="quickClickAudioFunction()"></div>
+                                      </div>
+                                      <p style="align-self: center; margin-left: 8px;">Outrun</p>
+                                  </div>
+                              <!-- </label> --> 
+
+    <!--                          <label for="vaporWave">-->
+    <!--                              <input type="checkbox" id = "vaporWaveCB" value=".mainImgVaporWave" class="formCheckBox vaporWaveCB" onclick="quickClickAudioFunction()" >-->
+                                  <div class ="fakeCheckBoxWrap">
+                                      <div class="formCheckBoxBorder">
+                                          <div class="formCheckBox newCheckBox vaporWaveCB unchecked" id="vaporWave" onclick="quickClickAudioFunction()"></div>
+                                      </div>
+                                      <p style="align-self: center; margin-left: 8px;">Vaporwave</p>
+                                  </div>
+    <!--                           </label>  <br>-->
+
+    <!--                          <label for="cyberPunk">-->
+    <!--                              <input type="checkbox" id = "cyberPunkCB" value=".mainImgCyberPunk" class="formCheckBox cyberPunkCB" onclick="quickClickAudioFunction()">-->
+                                  <div class ="fakeCheckBoxWrap">                            
+                                      <div class="formCheckBoxBorder">
+                                          <div class="formCheckBox  newCheckBox cyberPunkCB checked" id="cyberPunk" onclick="quickClickAudioFunction()"></div>
+                                      </div>
+                                      <p style="align-self: center; margin-left: 8px;">Cyberpunk</p>
+    <!--                           </label>-->
+                                </div>
+
+
+                        </div>
+<!--select all and image reset (clear all images and searchbox content) buttons-->
+					</div>
+                        <div class="clear-select" onclick="innerButtonClickAudioFunction()">
+<!--                            <a href = "#topScreen">-->
+                                <audio class="innerButtonClickAudio"><source src="Sound_Related/Button_Clicks/ButtonEject_Three.wav" type="audio/WAV"></audio>
+                                <button class = "buttonStyle imageReset ">image reset</button>
+<!--                            </a> -->
+<!--<button class="cBSelect-all displayNone">select all </button>-->
+                        </div>
+                    </div>
+            </div>
+<!--MOVIEMODE CONTROL CONSOLE -->
+                <div class = "movieModeContainer adaptiveMovieModeContainer userSelectNone displayNone">
+                    <div class = "movieModeToggleWrap" onclick="innerButtonClickAudioFunction()">
+                        <!-- OLD BUTTON -->
+                        <!-- <input class = "movieModeToggle" type="button" style="background: darkgrey" value="I O"> ->>
+                            <!-- NEW BUTTON -->
+                            <div class="movieModeToggle buttonStyle">
+                                <!-- POWER SYMBOL OFF -->
+                                <img src="photos/Tool Photos/powerSymbolOff.png" class="powerSymbol PowerSymbolOff">
+                                <!-- POWER SYMBOL ON -->
+                                <img src="photos/Tool Photos/powerSymbolOn.png" class="powerSymbol PowerSymbolOn displayNone">
+                            </div>
+
+                    </div>
+                        <div class = "movieModeDivider"></div>
+
+                            <div class="radioContainer" onclick="quickClickAudioFunction()">
+                        <p style = "color:black; position:absolute; font-size: 10px; top:9;">speed</p>
+                                <label><input type="radio" class = "radioOne b"><span class="radio"></span></label>
+                                <label><input type="radio" class = "radioTwo a" checked><span class="radio"></span></label>
+                                <label><input type="radio" class = "radioThree b"><span class="radio"></span></label>
+							</div>
+                </div>
+
+<!-- SOUND CONTROL CONSOLE --> 
+                <div class = "soundControlContainer adaptiveSoundControlContainer userSelectNone displayNone">
+
+					<div class="soundControlWrap">
+                    
+					<!-- MUSIC ICON -->
+						<div class = "musicSectionWrap soundTopMargin" title="music on/off button">
+
+							<audio class = "quickClickTwoAudio" > <source src="Sound_Related/Button_Clicks/quickClick_ButtonEject_Two.wav" type="audio/WAV"></audio>
+
+							<audio loop class="songLoop">
+								<source src="Sound_Related/Images_Of_You_Loop.wav" type="audio/WAV">
+							</audio>
+                            <div class="musicIconDesktop">
+                                <img src="Photos/Tool Photos/musicLogoOn_Grey.png" alt = "sound on/off" class = "musicOnIconDesktop soundIcon displayNone" onclick="quickClickTwoAudioFunction()">
+                                <img src="Photos/Tool Photos/musicLogoOff_Grey.png" alt = "sound on/off" class = "musicMuteIconDesktop soundIcon" onclick="quickClickTwoAudioFunction()">
+                            </div>
+
+							<div class="soundLevelContainer musicLevelContainer displayNone" id="soundLevelContainer">
+								<div class="barOn musicLevelBar soundLevelBar musicLevelOne" onclick="quickClickAudioFunction()" id="musicLevelOne"></div>
+								<div class="barOff musicLevelBar soundLevelBar musicLevelTwo" onclick="quickClickAudioFunction()" id="musicLevelTwo"></div>
+								<div class="barOff musicLevelBar soundLevelBar musicLevelThree" onclick="quickClickAudioFunction()" id="musicLevelThree"></div>
+								<div class="barOff musicLevelBar soundLevelBar musicLevelFour" onclick="quickClickAudioFunction()" id="musicLevelFour"></div>
+								<div class="barOff musicLevelBar soundLevelBar musicLevelFive" onclick="quickClickAudioFunction()" id="musicLevelFive"></div>
+							</div>
+
+						</div>
+                        
+                        <!-- PURPLE DIVIDER -->
+						<div class = "movieModeDivider" style="margin: 0px 7px 0px 7px"></div>
+
+					<!-- SFX ICON -->
+						<div class = "sfxSectionWrap soundTopMargin" title="sound effects on/off button">
+
+							<audio class = "quickClickTwoAudio" > <source src="Sound_Related/Button_Clicks/quickClick_ButtonEject_Two.wav" type="audio/WAV"></audio>
+                            
+                            <div class = "sfxIconDesktop ">
+                                <img src="Photos/Tool Photos/sound_On.png" alt = "sound on/off" class = "sfxOnIconDesktop soundIcon" onclick="quickClickTwoAudioFunction()">
+                                <img src="Photos/Tool Photos/sound_Mute.png" alt = "sound on/off" class = "sfxMuteIconDesktop soundIcon displayNone" onclick="quickClickTwoAudioFunction()">
+                            </div>
+
+							<div class="soundLevelContainer sfxLevelContainer" id="soundLevelContainer">
+								<div class="barOn sfxLevelBar soundLevelBar sfxLevelOne" onclick="quickClickAudioFunction()" id="sfxLevelOne"></div>
+								<div class="barOn sfxLevelBar soundLevelBar sfxLevelTwo" onclick="quickClickAudioFunction()" id="sfxLevelTwo"></div>
+								<div class="barOn sfxLevelBar soundLevelBar sfxLevelThree" onclick="quickClickAudioFunction()" id="sfxLevelThree"></div>
+								<div class="barOn sfxLevelBar soundLevelBar sfxLevelFour" onclick="quickClickAudioFunction()" id="sfxLevelFour"></div>
+								<div class="barOff sfxLevelBar soundLevelBar sfxLevelFive" onclick="quickClickAudioFunction()" id="sfxLevelFive"></div>
+							</div>
+
+						</div>
+				</div>
+			</div>
+</div>
+<!--MAIN SECTION-------------------------------------------------------------------------------------------------------------------------------->
+
+<!--WAVELINE BAR - EXTRA EYE CANDY FOR BAR HEADER-->
+
+
+<!--PHOTO SECTION-->
+<div id = "MyPhotoSection userSelectNone">
+<!--INFO SECTION
+------------------------------------------------------------------------------------------------------------------->
+<div class = "infoPicWrap infoPicCenter displayNone" style="text-align: center;">
+	<div class="infoPicContainer">
+
+		<!-- ARROW AREA SPACE THE SITS ABOVE MAIN INFO PIC-->
+			<div class = "infoPicControlsColumn" style = "padding-bottom: 8px;">
+				<nav class = "infoPicControlsRow" id="infoNavigationRow">
+					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo" onclick = "quickClickAudioFunction()">
+
+            		<p style="margin-left:6px;" id="exitInfo" class="iconHover infoNavElement" onclick="tabCloseSoundAudioFunction()"><strong>X</strong></p>
+				</nav>
+			</div>
+
+		<!--ABOUT THE PAGE-->
+			<div class = "infoPicAbout displayNone">
+				<p><span class = "infoDescription" >    
+				Wavefm is a photo viewing platform which consists purely of vaporwave, cyberpunk and retro images. </span><br>
+				<span class = "infoEnjoy">Enjoy the journey</span> <br>
+				<span class = "infoWavefm">wavefm</span></p>
+			</div>
+
+		<!--HOW THE FK DO YOU OPERATE THIS THING?-->
+            <div id ="infoPicControlsWrap" class = "displayNone">
+                <div class = "infoPicControlsColumn">
+                    <div class = "infoPicControlsRow">
+                        <img src = "Photos/Tool Photos/display grey.png" title = "change photo display" class = "infoImgMargin displayImg">
+                            <p><span class = "controlFont"><strong>Display:</strong> this button toggles between the 3 display modes.            
+                            </span></p>
+                    </div>
+                </div><br>
+
+                <div class = "infoPicControlsColumn">
+                    <div class = "infoPicControlsRow">
+                        <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon infoImgMargin" >
+                           <p><span class = "controlFont"><strong>Preferences:</strong> when clicked, you can select to view either cyberpunk, vaporwave or retro images.</span>          
+                            </p>
+                    </div>
+                </div><br>
+
+                <div class = "infoPicControlsColumn">
+                    <div class = "infoPicControlsRow">
+                        <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg infoImgMargin" >
+                           <p><span class = "controlFont"><strong>Movie mode:</strong> once activated, you enter a visually enticing slide show.
+                           </span> </p>
+                    </div>
+                </div><br>
+
+                <div class = "infoPicControlsColumn">
+                    <div class = "infoPicControlsRow">
+                        <img src = "Photos/Tool%20Photos/soundControl.png" class = "soundControlIcon infoImgMargin" >
+                           <p><span class = "controlFont"><strong>Sound control:</strong> giving you the option to turn off/on and control the volume of music and sound effects.
+                           </span> </p>
+                    </div>
+                </div><br>
+
+                <div class = "infoPicControlsColumn">
+                    <div class = "infoPicControlsRow">
+                        <img src ="Photos/Tool Photos/info.png" class = "infoPic infoImgMargin">
+                           <p><span class = "controlFont"><strong>Info mode:</strong> where you can find some information about wavefm.
+                            </span></p>
+                    </div><br>
+                <p style="margin:0 auto"> <span class = "controlFont"> <strong>HINT: use the search bar to fine tune the type of images you would like to see.</strong></span></p>
+                </div>
+            </div>
+
+        <!-- CONTACT US -->
+            <div id="contactUsContainer">
+                <h1 class="contactFont"> Contact us.</h1>
+                <p style="font-size: 3em;">Feel free to emails us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
+                <div id="socialMediaLinksWrap">
+                    <img src="Photos/Tool Photos/instagram.png" class="socialMediaIcon">
+                    <img src="Photos/Tool Photos/twitter.png" class="socialMediaIcon">
+                    <img src="Photos/Tool Photos/facebook.png" class="socialMediaIcon">
+                    <img src="Photos/Tool Photos/pinterest.png" class="socialMediaIcon">
+                    <strong class="contactFont" id="comingSoon" style="font-size: 3em;">COMING SOON!</strong>
+                </div>
+            </div>
+
+		</div>
+</div>
+
+<!-- Photoview section
+----------------------------------------------------------------------------------------------------------------------------------------->
+<div class = "photoViewSection displayNone">
+    
+	<!--VIEW ONE // MY VIEW // class: mainImg
+	------------------------------------------------------------------------------------->
+	<div class = "myView centered">
+<!--		<img src = "Photos/Tool%20Photos/arrow.png" id = "arrowOne" class = "arrow leftArrow displayNone">-->
+        <p  id = "arrowOne" class = "arrow visibilityNone leftArrow newArrow" >></p> 
+
+			<div class ="myViewImageWrapper">
+<!-- CYBERPUNK SHOTS -->
+		<img src="photos/display photos/cyberPunkOne.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img driving car cyberpunk city futuristic">
+
+		<img src="photos/display photos/cyberPunkTwo.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk space text">
+
+		<img src="photos/display%20photos/cyberPunkThree.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk music portrait text">
+
+		<img src="photos/display photos/cyberPunkFour.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk futuristic">
+
+		<img src="photos/display photos/cyberPunkfive.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSix.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSeven.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img cyberpunk music space technologic text">
+
+<!-- DRIVING SHOTS -->
+		<img src="Photos/display%20photos/drivingShotOne.png" class = "mainImg displayImgRetro mainImgRetro displayNone img driving car grid city sun retro">
+
+		<img src="Photos/display photos/drivingShotThree.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img driving car grid sun tree retro">
+
+		<img src="Photos/display photos/drivingShotFour.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img driving car bit city text retro">
+
+		<img src="Photos/display photos/drivingShotFive.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk pImgCity displayNone img driving car city cyberpunk">
+
+		<img src="Photos/display photos/drivingShotSix.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img driving car city futuristic cyberpunk">
+
+		<img src="Photos/display%20photos/drivingShotSeven.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img driving car cyberpunk city">
+
+<!-- GRID SHOTS -->
+		<img src="photos/display photos/gridphotoOne.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoTwo.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoThree.png" class = "mainImg displayImgRetro mainImgRetro displayNone img grid city sun retro">
+
+		<img src="photos/display photos/gridphotoFour.jpg" class = "mainImg displayImgVaporWave mainImgVaporWave displayNone img grid computer vaporwave text">
+
+		<img src="photos/display photos/gridphotosix.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid space retro">
+
+		<img src="photos/display photos/gridphotoSeven.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoEight.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid text space retro">
+
+		<img src="photos/display%20photos/gridPhotoNine.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img grid retro">
+
+<!-- CITY SHOTS -->
+		<img src="Photos/display photos/cityShotOne.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img city sun retro">
+
+<!-- SYNTH TREES -->
+		<img src="photos/display%20photos/synthTreeOne.jpg" class = "mainImg displayImgVaporWave mainImgVaporWave displayNone img tree vaporwave">
+
+		<img src="photos/display%20photos/synthTreeTwo.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img tree sun text retro">
+
+		<img src="photos/display photos/synthTreeThree.jpg" class = "mainImg displayImgVaporWave mainImgVaporWave displayNone img tree vaporwave">
+
+<!-- SYNTHWAVE SUN -->
+		<img src="photos/display%20photos/synthWaveSunOne.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img sun space retro">
+
+		<img src="photos/display%20photos/synthWaveSunTwo.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img sun city space grid retro">
+
+<!-- PORTRAIT SHOTS -->
+		<img src="photos/display%20photos/portraitGraphicOne.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img portrait retro">
+		<img src="photos/display%20photos/portaitGraphicTwo.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img portrait movie text retro">
+
+<!-- GAME PHOTO SHOTS -->
+		<img src="photos/display photos/gamePhotoOne.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img game text cyberpunk">
+
+<!-- FUTURISTIC PHOTO SHOTS -->
+		<img src="photos/display photos/paintingOne.jpg" class = "mainImg displayImgCyberPunk mainImgCyberPunk displayNone img city futuristic cyberpunk">
+
+<!-- ARCADE PHOTO SHOTS-->
+		<img src="photos/display photos/arcadePhotoOne.jpg" class = "mainImg displayImgVaporWave mainImgVaporWave displayNone img arcade vaporwave">
+
+<!-- VAPORWAVE PHOTO SHOTS-->
+		<img src="photos/display photos/vaporWaveOne.jpg" class = "mainImg displayImgVaporWave mainImgVaporWave displayNone img vaporwave retro computer">
+
+<!-- RETRO PHOTO SHOTS-->
+		<img src="photos/display photos/retroPhotoOne.jpg" class = "mainImg displayImgRetro mainImgRetro displayNone img retro">   
+	</div>
+<!--		<img src = "Photos/Tool%20Photos/arrow.png" id = "arrowTwo" class = "arrow rightArrow displayNone">-->
+        <p id = "arrowTwo" class = "arrow visibilityNone rightArrow newArrow">></p>
+	</div>
+	<!--VIEW TWO // FB TIMELINE VIEW // class: fbImg
+	------------------------------------------------------------------------------------->
+	<div class ="photoSectionAlignment fbTimeline displayNone">
+
+
+<!-- CYBERPUNK SHOTS -->
+		<img src="photos/display photos/cyberPunkOne.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img driving car cyberpunk city futuristic">
+
+		<img src="photos/display photos/cyberPunkTwo.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk space text">
+
+		<img src="photos/display%20photos/cyberPunkThree.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk music portrait text">
+
+		<img src="photos/display photos/cyberPunkFour.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk futuristic">
+
+		<img src="photos/display photos/cyberPunkfive.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSix.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSeven.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img cyberpunk music space technologic text">
+
+<!-- DRIVING SHOTS -->
+		<img src="Photos/display%20photos/drivingShotOne.png" class = "fbImg displayImgRetro fbImgRetro displayNone img driving car grid city sun retro">
+
+		<img src="Photos/display photos/drivingShotThree.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img driving car grid sun tree retro">
+
+		<img src="Photos/display photos/drivingShotFour.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img driving car bit city text retro">
+
+		<img src="Photos/display photos/drivingShotFive.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img driving car city cyberpunk">
+
+		<img src="Photos/display photos/drivingShotSix.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img driving car city futuristic cyberpunk">
+
+		<img src="Photos/display%20photos/drivingShotSeven.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img driving car cyberpunk city">
+
+
+<!-- GRID SHOTS -->
+		<img src="photos/display photos/gridphotoOne.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoTwo.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoThree.png" class = "fbImg displayImgRetro fbImgRetro displayNone img grid city sun retro">
+
+		<img src="photos/display photos/gridphotoFour.jpg" class = "fbImg displayImgVaporWave fbImgVaporWave displayNone img grid computer vaporwave text">
+
+		<img src="photos/display photos/gridphotosix.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid space retro">
+
+		<img src="photos/display photos/gridphotoSeven.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoEight.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid text space retro">
+
+		<img src="photos/display%20photos/gridPhotoNine.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img grid retro">
+
+<!-- CITY SHOTS -->
+		<img src="Photos/display photos/cityShotOne.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img city sun retro">
+
+<!-- SYNTH TREES -->
+		<img src="photos/display%20photos/synthTreeOne.jpg" class = "fbImg displayImgVaporWave fbImgVaporWave displayNone img tree vaporwave">
+
+		<img src="photos/display%20photos/synthTreeTwo.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img tree sun text retro">
+
+		<img src="photos/display photos/synthTreeThree.jpg" class = "fbImg displayImgVaporWave fbImgVaporWave displayNone img tree vaporwave">
+
+<!-- SYNTHWAVE SUN -->
+		<img src="photos/display%20photos/synthWaveSunOne.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img sun space retro">
+
+		<img src="photos/display%20photos/synthWaveSunTwo.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img sun city space grid retro">
+
+<!-- PORTRAIT SHOTS -->
+		<img src="photos/display%20photos/portraitGraphicOne.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img portrait retro">
+		<img src="photos/display%20photos/portaitGraphicTwo.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img portrait movie text retro">
+
+<!-- GAME PHOTO SHOTS -->
+		<img src="photos/display photos/gamePhotoOne.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img game text cyberpunk">
+
+<!-- FUTURISTIC PHOTO SHOTS -->
+		<img src="photos/display photos/paintingOne.jpg" class = "fbImg displayImgCyberPunk fbImgCyberPunk displayNone img city futuristic cyberpunk">
+
+<!-- ARCADE PHOTO SHOTS-->
+		<img src="photos/display photos/arcadePhotoOne.jpg" class = "fbImg displayImgVaporWave fbImgVaporWave displayNone img arcade vaporwave">
+
+<!-- VAPORWAVE PHOTO SHOTS-->
+		<img src="photos/display photos/vaporWaveOne.jpg" class = "fbImg displayImgVaporWave fbImgVaporWave displayNone img vaporwave retro computer">
+
+<!-- RETRO PHOTO SHOTS-->
+		<img src="photos/display photos/retroPhotoOne.jpg" class = "fbImg displayImgRetro fbImgRetro displayNone img retro">
+
+   
+        
+	</div>
+	<!--VIEW THREE // PINTREST VIEW // class: pImg
+	--------------------------------------------------------------------------------------->
+	<div class ="photoSectionAlignment pintrestView imgZ displayNone ">
+
+<!-- CYBERPUNK SHOTS -->
+		<img src="photos/display photos/cyberPunkOne.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img driving car cyberpunk city futuristic">
+
+		<img src="photos/display photos/cyberPunkTwo.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk space text">
+
+		<img src="photos/display%20photos/cyberPunkThree.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk music portrait text">
+
+		<img src="photos/display photos/cyberPunkFour.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk futuristic">
+
+		<img src="photos/display photos/cyberPunkfive.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSix.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk">
+
+		<img src="photos/display photos/cyberPunkSeven.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img cyberpunk music space technologic text">
+
+<!-- DRIVING SHOTS -->
+		<img src="Photos/display%20photos/drivingShotOne.png" class = "pImg displayImgRetro pImgRetro displayNone img driving car grid city sun retro">
+
+		<img src="Photos/display photos/drivingShotThree.jpg" class = "pImg displayImgRetro pImgRetro displayNone img driving car grid sun tree retro">
+
+		<img src="Photos/display photos/drivingShotFour.jpg" class = "pImg displayImgRetro pImgRetro displayNone img driving car bit city text retro">
+
+		<img src="Photos/display photos/drivingShotFive.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img driving car city cyberpunk">
+
+		<img src="Photos/display photos/drivingShotSix.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img driving car city futuristic cyberpunk">
+
+		<img src="Photos/display%20photos/drivingShotSeven.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img driving car cyberpunk city">
+
+
+<!-- GRID SHOTS -->
+		<img src="photos/display photos/gridphotoOne.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoTwo.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoThree.png" class = "pImg displayImgRetro pImgRetro displayNone img grid city sun retro">
+
+		<img src="photos/display photos/gridphotoFour.jpg" class = "pImg displayImgVaporWave pImgVaporWave displayNone img grid computer vaporwave text">
+
+		<img src="photos/display photos/gridphotosix.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid space retro">
+
+		<img src="photos/display photos/gridphotoSeven.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid sun retro">
+
+		<img src="photos/display photos/gridphotoEight.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid text space retro">
+
+		<img src="photos/display%20photos/gridPhotoNine.jpg" class = "pImg displayImgRetro pImgRetro displayNone img grid retro">
+
+<!-- CITY SHOTS -->
+		<img src="Photos/display photos/cityShotOne.jpg" class = "pImg displayImgRetro pImgRetro displayNone img city sun retro">
+
+<!-- SYNTH TREES -->
+		<img src="photos/display%20photos/synthTreeOne.jpg" class = "pImg displayImgVaporWave pImgVaporWave displayNone img tree vaporwave">
+
+		<img src="photos/display%20photos/synthTreeTwo.jpg" class = "pImg displayImgRetro pImgRetro displayNone img tree sun text retro">
+
+		<img src="photos/display photos/synthTreeThree.jpg" class = "pImg displayImgVaporWave pImgVaporWave displayNone img tree vaporwave">
+
+<!-- SYNTHWAVE SUN -->
+		<img src="photos/display%20photos/synthWaveSunOne.jpg" class = "pImg displayImgRetro pImgRetro displayNone img sun space retro">
+
+		<img src="photos/display%20photos/synthWaveSunTwo.jpg" class = "pImg displayImgRetro pImgRetro displayNone img sun city space grid retro">
+
+<!-- PORTRAIT SHOTS -->
+		<img src="photos/display%20photos/portraitGraphicOne.jpg" class = "pImg displayImgRetro pImgRetro displayNone img portrait retro">
+
+		<img src="photos/display%20photos/portaitGraphicTwo.jpg" class = "pImg displayImgRetro pImgRetro displayNone img portrait movie text retro">
+
+<!-- GAME PHOTO SHOTS -->
+		<img src="photos/display photos/gamePhotoOne.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img game text cyberpunk">
+
+<!-- FUTURISTIC PHOTO SHOTS -->
+		<img src="photos/display photos/paintingOne.jpg" class = "pImg displayImgCyberPunk pImgCyberPunk displayNone img city futuristic cyberpunk">
+
+<!-- ARCADE PHOTO SHOTS-->
+		<img src="photos/display photos/arcadePhotoOne.jpg" class = "pImg displayImgVaporWave pImgVaporWave displayNone img arcade vaporwave">
+
+<!-- VAPORWAVE PHOTO SHOTS-->
+		<img src="photos/display photos/vaporWaveOne.jpg" class = "pImg displayImgVaporWave pImgVaporWave displayNone img vaporwave retro computer">
+
+<!-- RETRO PHOTO SHOTS-->
+		<img src="photos/display photos/retroPhotoOne.jpg" class = "pImg displayImgRetro pImgRetro displayNone img retro">
+
+			</div>
+
+</div>
+
+<!--GO TO TOP OF PAGE ICON-->
+    <a href="#topScreen">
+        <div class="topPageArrowContainer displayNone" onclick="normalClickAudioFunction()" title="Back to top of screen">
+            <p class = "topPageArrowIcon" onclick="scrollToTop()"><strong> &#62;</strong> </p>
+					<audio class = "normalClick" onclick="normalClickAudioFunction()"> <source src="Sound_Related/Button_Clicks/ButtonEject_Four.wav" type="audio/WAV"></audio>
+        </div>
+    </a>
+</div>
+
+<!--SMALL SCREEN ADAPTIVE ICON BAR-->
+
+
+<div class = "blur"></div>
+
+
+<footer class="smallScreenBottomBar adaptiveTabButtons userSelectNone"> 
+
+		<!--adaptive display button image-->
+		<a>
+			<img src = "Photos/Tool Photos/display grey.png" class = "displayImg adaptiveDisplayButton" title = "change photo display" onclick="normalClickAudioFunction()">
+		</a>
+
+	<!--adaptive preferences button image-->
+		<a class = "off">
+			<img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon adaptivePreferencesIcon off" id="adaptivePreferencesButton" >
+		</a>
+
+	<!--adaptive moviemode button image-->
+		<a class = "off">
+			<img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b movieModeButtonAdaptive off" id="adaptiveMovieModeButton" >
+		</a>
+
+		<!--adaptive soundContron image-->
+		<a>
+			<img src = "Photos/Tool Photos/soundControl.png" alt = "sound on/off" class = "adaptiveSoundControl soundControlIcon off" id="adaptiveSoundControlButton">
+		</a>
+</footer>
+<!--SMALLER SCREEN SIZE BOTTOM ICONS BAR-->
+<!--<script src="Javascript/Wave%20JS%2025.03.2020.js"></script>--> <!-- old JS file -->
+
+
+
+
+</body>
+
+<script src="Javascript_Files/GlobalVariables&Defaults.js"></script><!-- global variables & defaults -->
+
+<script src="Javascript_Files/GlobalFunctions.js"></script><!-- global functions -->
+
+<script src="Javascript_Files/wavefmLogoCode.js"></script><!-- wavefm logo code -->
+
+<script src="Javascript_Files/searchBarCode.js"></script><!-- searchbar code -->
+
+<script src="Javascript_Files/movieModeCode.js"></script><!--moviemode code -->
+
+<script src="Javascript_Files/displayButtonCode.js"></script><!-- displayButton code -->
+
+<script src="Javascript_Files/PreferencesCode.js"></script><!-- preferences code -->
+
+<script src="Javascript_Files/tabDisplayCode.js"></script> tab display code 
+
+<script src="Javascript_Files/InfoAboutCode.js"></script><!--infoAbout code -->
+
+<script src="Javascript_Files/soundCode.js"></script><!-- sound code -->
+
+<script src="Javascript_Files/myViewArrowCode.js"></script><!-- arrow code -->
+
+<script src="Javascript_Files/imgLoadScript.js"></script><!-- image load script -->
+
+<script src="Javascript_Files/functionsOnLoad.js"></script><!-- functions on-load script -->
+
