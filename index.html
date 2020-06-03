@@ -55,7 +55,7 @@
 
         <!--PREFERANCE ICON-->
                             <div class = "tabButtons" style="display: inline-flex;">
-                                <div class = "iconMargin iconHover navIcon preferencesButton off " title = "photo preferance" >
+                                <div class = "iconMargin iconHover navIcon preferencesButton off controlIcon" title = "photo preferance" >
                                     <a>
 
                                     <audio class = "openSound"> <source src="Sound_Related/Button_Clicks/OnOffToggle_On_One.Two.wav" type="audio/WAV"></audio>
@@ -66,7 +66,7 @@
                                 </div>
 
         <!--MOVIE ICON-->
-                                <div class = "movieModeTab iconMargin iconHover navIcon movieModeButton off" title = "movie mode" > 
+                                <div class = "movieModeTab iconMargin iconHover navIcon movieModeButton off controlIcon" title = "movie mode" > 
 
                                     <audio class = "tabSound"> <source src="Sound_Related/Button_Clicks/ButtonEject_One.Two.wav" type="audio/WAV"></audio>
 
@@ -76,7 +76,7 @@
                                 </div>
 
     <!-- SOUND ICON-->
-                                <div class = " iconMargin iconHover navIcon soundControlButton off" title = "sound control" > 
+                                <div class = " iconMargin iconHover navIcon soundControlButton off controlIcon" title = "sound control" > 
 
                                     <audio class = "tabSound"> <source src="Sound_Related/Button_Clicks/ButtonEject_One.Two.wav" type="audio/WAV"></audio>
 
@@ -102,7 +102,7 @@
 
     </header>
 <!--PREFERANCE CHECKBOX-->
-            <div class = "dnPrefContainer displayNone">
+            <div class = "dnPrefContainer controlTab displayNone">
                 <div class = "prefContainer userSelectNone">
                     
 					<div class = "preferenceCheckbox">	
@@ -154,7 +154,7 @@
                     </div>
             </div>
 <!--MOVIEMODE CONTROL CONSOLE -->
-                <div class = "movieModeContainer adaptiveMovieModeContainer userSelectNone displayNone">
+                <div class = "movieModeContainer adaptiveMovieModeContainer userSelectNone controlTab displayNone">
                     <div class = "movieModeToggleWrap" onclick="innerButtonClickAudioFunction()">
                         <!-- OLD BUTTON -->
                         <!-- <input class = "movieModeToggle" type="button" style="background: darkgrey" value="I O"> ->>
@@ -178,7 +178,7 @@
                 </div>
 
 <!-- SOUND CONTROL CONSOLE --> 
-                <div class = "soundControlContainer adaptiveSoundControlContainer userSelectNone displayNone">
+                <div class = "soundControlContainer controlTab adaptiveSoundControlContainer userSelectNone displayNone">
 
 					<div class="soundControlWrap">
                     
@@ -240,91 +240,94 @@
 <!--INFO SECTION
 ------------------------------------------------------------------------------------------------------------------->
 <div class = "infoPicWrap infoPicCenter displayNone" style="text-align: center;">
-	<div class="infoPicContainer">
+	<div class="infoPicContainer infoElement">
 
-		<!-- ARROW AREA SPACE THE SITS ABOVE MAIN INFO PIC-->
-			<div class = "infoPicControlsColumn" style = "padding-bottom: 8px;">
-				<nav class = "infoPicControlsRow" id="infoNavigationRow">
-<!--					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo infoNavElement displayNone" onclick = "quickClickAudioFunction()">-->
+            <!-- ARROW AREA SPACE THE SITS ABOVE MAIN INFO PIC-->
 
-            		<p style="margin-left:6px;" id="exitInfo" class="iconHover infoNavElement" onclick="tabCloseSoundAudioFunction()"><strong>X</strong></p>
+                <div id="infoPicBrightnessFilter" class="infoElement"></div>
 
-					<img src="Photos/Tool Photos/MenuIconTwo.png" class="iconHoverTwo infoNavElement" id="infoMenuIcon" onclick = "quickClickAudioFunction()">
+                <div class = "infoPicControlsColumn infoElement" style = "padding-bottom: 8px;">
+                    <nav class = "infoPicControlsRow infoElement" id="infoNavigationRow">
+    <!--					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo infoNavElement displayNone" onclick = "quickClickAudioFunction()">-->
 
-                    <nav id="infoMenuNav" class="infoNavElement">
-                        <span id="menuOptionAbout" class="infoMenuElement menuElementSelected">About</span>
-                        <span id="menuOptionInstructions" class="infoMenuElement">Instructions</span>
-                        <span id="menuOptionContact" class="infoMenuElement">Contact</span>
+                        <p style="margin-left:6px; z-index: 5000;" id="exitInfo"  class="iconHover infoNavElement" onclick="tabCloseSoundAudioFunction()"><strong>X</strong></p>
+
+                        <img src="Photos/Tool Photos/MenuIconTwo.png" style="z-index: 5000;"  class="iconHoverTwo infoNavElement" id="infoMenuIcon" onclick = "quickClickAudioFunction()">
+
+                        <nav id="infoMenuNav" class="infoNavElement"  style="z-index: 5000;">
+                            <span id="menuOptionAbout" class="infoMenuElement menuElementSelected" onclick="quickClickAudioFunction()">About</span>
+                            <span id="menuOptionInstructions" class="infoMenuElement" onclick="quickClickAudioFunction()">Instructions</span>
+                            <span id="menuOptionContact" class="infoMenuElement" onclick="quickClickAudioFunction()">Contact</span>
+                        </nav>
                     </nav>
-				</nav>
-			</div>
+                </div>
 
-		<!--ABOUT THE PAGE-->
-			<div class = "infoPicAbout">
-				<p><span class = "infoDescription" >    
-				Wavefm is a photo viewing platform which consists purely of vaporwave, cyberpunk and retro images. </span><br>
-				<span class = "infoEnjoy">Enjoy the journey</span> <br>
-				<span class = "infoWavefm">wavefm</span></p>
-			</div>
+            <!--ABOUT THE PAGE-->
+                <div id="infoAboutDisplayWrap" class = "infoPicAbout infoElement menuOptionDisplayElement">
+                    <p><span class = "infoDescription" >    
+                    Wavefm is a photo viewing platform which consists purely of vaporwave, cyberpunk and outrun images. </span><br>
+                    <span class = "infoEnjoy">Enjoy the journey</span> <br>
+                    <span class = "infoWavefm">wavefm</span></p>
+                </div>
 
-		<!--HOW THE FK DO YOU OPERATE THIS THING?-->
-            <div id ="infoPicControlsWrap" class = "displayNone">
-                <div class = "infoPicControlsColumn">
-                    <div class = "infoPicControlsRow">
-                        <img src = "Photos/Tool Photos/display grey.png" title = "change photo display" class = "infoImgMargin displayImg">
-                            <p><span class = "controlFont"><strong>Display:</strong> this button toggles between the 3 display modes.            
-                            </span></p>
-                    </div>
-                </div><br>
-
-                <div class = "infoPicControlsColumn">
-                    <div class = "infoPicControlsRow">
-                        <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon infoImgMargin" >
-                           <p><span class = "controlFont"><strong>Preferences:</strong> when clicked, you can select to view either cyberpunk, vaporwave or retro images.</span>          
-                            </p>
-                    </div>
-                </div><br>
-
-                <div class = "infoPicControlsColumn">
-                    <div class = "infoPicControlsRow">
-                        <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg infoImgMargin" >
-                           <p><span class = "controlFont"><strong>Movie mode:</strong> once activated, you enter a visually enticing slide show.
-                           </span> </p>
-                    </div>
-                </div><br>
-
-                <div class = "infoPicControlsColumn">
-                    <div class = "infoPicControlsRow">
-                        <img src = "Photos/Tool%20Photos/soundControl.png" class = "soundControlIcon infoImgMargin" >
-                           <p><span class = "controlFont"><strong>Sound control:</strong> giving you the option to turn off/on and control the volume of music and sound effects.
-                           </span> </p>
-                    </div>
-                </div><br>
-
-                <div class = "infoPicControlsColumn">
-                    <div class = "infoPicControlsRow">
-                        <img src ="Photos/Tool Photos/info.png" class = "infoPic infoImgMargin">
-                           <p><span class = "controlFont"><strong>Info mode:</strong> where you can find some information about wavefm.
-                            </span></p>
+            <!--HOW THE FK DO YOU OPERATE THIS THING?-->
+                <div id ="infoInstructionsDisplayWrap" class = "displayNone menuOptionDisplayElement infoElement">
+                    <div class = "infoPicControlsColumn">
+                        <div class = "infoPicControlsRow">
+                            <img src = "Photos/Tool Photos/display grey.png" title = "change photo display" class = "infoImgMargin displayImg">
+                                <p><span class = "controlFont"><strong>Display:</strong> this button toggles between the 3 display modes.            
+                                </span></p>
+                        </div>
                     </div><br>
-                <p style="margin:0 auto"> <span class = "controlFont"> <strong>HINT: use the search bar to fine tune the type of images you would like to see.</strong></span></p>
-                </div>
-            </div>
 
-        <!-- CONTACT US -->
-            <div id="contactUsContainer" class ="displayNone">
-                <h1 class="contactFont"> Contact us.</h1>
-                <p style="font-size: 3em;">Feel free to emails us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
-                <div id="socialMediaLinksWrap">
-                    <img src="Photos/Tool Photos/instagram.png" class="socialMediaIcon">
-                    <img src="Photos/Tool Photos/twitter.png" class="socialMediaIcon">
-                    <img src="Photos/Tool Photos/facebook.png" class="socialMediaIcon">
-                    <img src="Photos/Tool Photos/pinterest.png" class="socialMediaIcon">
-                    <strong class="contactFont" id="comingSoon" style="font-size: 3em;">COMING SOON!</strong>
-                </div>
-            </div>
+                    <div class = "infoPicControlsColumn">
+                        <div class = "infoPicControlsRow">
+                            <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon infoImgMargin" >
+                               <p><span class = "controlFont"><strong>Preferences:</strong> when clicked, you can select to view either cyberpunk, vaporwave or outrun images.</span>          
+                                </p>
+                        </div>
+                    </div><br>
 
-		</div>
+                    <div class = "infoPicControlsColumn">
+                        <div class = "infoPicControlsRow">
+                            <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg infoImgMargin" >
+                               <p><span class = "controlFont"><strong>Movie mode:</strong> once activated, you enter a visually enticing slide show with 3 speeds to choose from.
+                               </span> </p>
+                        </div>
+                    </div><br>
+
+                    <div class = "infoPicControlsColumn">
+                        <div class = "infoPicControlsRow">
+                            <img src = "Photos/Tool%20Photos/soundControl.png" class = "soundControlIcon infoImgMargin" >
+                               <p><span class = "controlFont"><strong>Sound control:</strong> giving you the option to turn on/off and control the volume of music and sound effects.
+                               </span> </p>
+                        </div>
+                    </div><br>
+
+                    <div class = "infoPicControlsColumn">
+                        <div class = "infoPicControlsRow">
+                            <img src ="Photos/Tool Photos/info.png" class = "infoPic infoImgMargin">
+                               <p><span class = "controlFont"><strong>Info mode:</strong> where you can find some information about wavefm.
+                                </span></p>
+                        </div><br>
+                    <p style="margin:0 auto"> <span class = "controlFont"> <strong>HINT: use the search bar to fine-tune the type of images you would like to see.</strong></span></p>
+                    </div>
+                </div>
+
+            <!-- CONTACT US -->
+                <div id="infoContactDisplayWrap" class ="displayNone infoElement menuOptionDisplayElement">
+                    <h1 class="contactFont"> Contact us.</h1>
+                    <p style="font-size: 3em;" id="emailLinkWords" class="zIndex5k">Feel free to email us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
+                    <div id="socialMediaLinksWrap" class="zIndex5k">
+                        <img src="Photos/Tool Photos/instagram.png" class="socialMediaIcon">
+                        <img src="Photos/Tool Photos/twitter.png" class="socialMediaIcon">
+                        <img src="Photos/Tool Photos/facebook.png" class="socialMediaIcon">
+                        <img src="Photos/Tool Photos/pinterest.png" class="socialMediaIcon">
+                        <strong class="contactFont" id="comingSoon" style="font-size: 3em;">COMING SOON!</strong>
+                    </div>
+</div>
+
+    </div>
 </div>
 
 <!-- Photoview section
@@ -656,7 +659,7 @@
 
 <script src="Javascript_Files/PreferencesCode.js"></script><!-- preferences code -->
 
-<script src="Javascript_Files/tabDisplayCode.js"></script> tab display code 
+<script src="Javascript_Files/tabDisplayCode.js"></script> <!-- tab display code --> 
 
 <script src="Javascript_Files/InfoAboutCode.js"></script><!--infoAbout code -->
 

@@ -2,6 +2,9 @@
 //....................................................................
     var winScroll = "";
     //MAKE INTO ALPHABETICAL ORDER WHEN YOU CLEAN UP PLS
+    var topNavBar = document.querySelector(".page-head");
+    var controlIcon = document.querySelectorAll(".controlIcon");
+    var controlTab = document.querySelectorAll(".controlTab");
     var movieModeContainer = document.querySelector(".movieModeContainer");
     var adaptiveMovieModeContainer = document.querySelector(".adaptiveMovieModeContainer");
     var wavefmLogo = document.querySelector(".waveFm");	
@@ -10,6 +13,20 @@
     var myView = document.querySelector(".myView");
 	var myViewImageWrapper = document.querySelector(".myViewImageWrapper");//myView images only, not including arrows
     var infoPicView = document.querySelector(".infoPicWrap");
+    
+
+    var menuOptionDisplayElement = document.querySelectorAll(".menuOptionDisplayElement");
+    var infoAboutDisplayWrap = document.querySelector("#infoAboutDisplayWrap");
+    var infoInstructionsDisplayWrap= document.querySelector("#infoInstructionsDisplayWrap");
+    var infoContactDisplayWrap = document.querySelector("#InfoContactDisplayWrap");
+    var infoMenuIcon = document.querySelector("#infoMenuIcon");
+    var infoMenuNavWrap = document.querySelector("#infoMenuNav");
+    var infoMenuAbout = document.querySelector("#menuOptionAbout");
+    var infoMenuInstructions = document.querySelector("#menuOptionInstructions");
+    var infoMenuContact = document.querySelector("#menuOptionContact");
+    var infoMenuElement = document.querySelectorAll(".infoMenuElement");
+    var emailLinkWords = document.querySelector("#emailLinkWords");
+    var infoPicBrightnessFilter = document.querySelector("#infoPicBrightnessFilter");
 
     var displayButton = document.querySelector(".displayButton");
     var adaptiveDisplayButton = document.querySelector(".adaptiveDisplayButton");
@@ -23,7 +40,7 @@
 	
 	var soundControlContainer = document.querySelector(".soundControlContainer");
     var adaptiveSoundControlContainer = document.querySelector(".adaptiveSoundControlContainer");
-    var infoArrow = document.querySelector(".infoArrow");
+//    var infoArrow = document.querySelector(".infoArrow");
     var photoViewSection = document.querySelector(".photoViewSection");
     var prefCheckBox = document.querySelector(".preferenceCheckbox");
     var movieModeToggleWrap = document.querySelector(".movieModeToggleWrap"); //button WRAP to turn on movie mode

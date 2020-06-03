@@ -96,20 +96,17 @@ z-index: 500;
 }
 
 .page-head {
-    z-index: 1;
-    display: flex;  
     align-items: center;  
-    flex-wrap: nowrap;
-    flex-direction: row;
-    background: white;
-/*    background-size: 200px 2000px;*/
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    filter: brightness(85%);
     align-self: center;
+    background: white;
+    display: flex; 
+    filter: brightness(85%);
     flex: 1 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;/
     padding: 2px 0px 2px 0px;
+    transition: filter .5s;
+    z-index: 1;
     width: 100%;
 }
 
@@ -398,6 +395,18 @@ height: 50px;
     width: 900px;
 }
 
+#infoPicBrightnessFilter {
+    background: white;
+    filter: brightness(40%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    opacity: 0.0;
+    z-index: 999;
+    transition: opacity .5s;
+}
+
+/*
 .infoArrow {
     position: absolute;
     margin: 0;
@@ -408,6 +417,7 @@ height: 50px;
     float: right;
     z-index: 30;
 }
+*/
 
 .infoPicAbout {
 display: flex;
@@ -484,6 +494,42 @@ padding-top: 5px;
     font-size:1.5em; 
     font-size: 2rem;
     font-family: 'nunito', monospace;
+/*    z-index:5000;*/
+}
+
+#infoMenuIcon {
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+
+#infoMenuNav {
+    background: white;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    filter: brightness(85%);
+    flex-direction: column;
+    height: 180px;
+    justify-content: center;
+    overflow: auto;
+    overflow-x: hidden;
+    opacity: 0.0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 1px;
+    transition: width .5s;
+
+}
+
+.infoMenuElement:hover{
+    cursor: pointer;
+}
+
+.menuElementSelected {
+    background: rgba(95, 31, 168, .7);
+    box-shadow: 0px 0px 20px 0px rebeccapurple;
 }
 
 .infoWavefm, .infoEnjoy, infoDescription, infoPicControlsRow, .contactFont{
@@ -494,7 +540,7 @@ padding-top: 5px;
     font-family: 'nunito';
 }
 
-#contactUsContainer{
+#infoContactDisplayWrap{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -914,6 +960,10 @@ filter:brightness(80%);
 }
 /* EXTRA SHIT
 ************************************************/
+.zIndex5k {
+    z-index: 5000;
+}
+
 .fakeCheckBoxWrap {
     display: flex;
     flex-direction: row;
