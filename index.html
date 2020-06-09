@@ -248,7 +248,6 @@
 
                 <div class = "infoPicControlsColumn infoElement" style = "padding-bottom: 8px;">
                     <nav class = "infoPicControlsRow infoElement" id="infoNavigationRow">
-    <!--					<img src = "Photos/Tool%20Photos/arrow.png" class = "infoArrow iconHoverTwo infoNavElement displayNone" onclick = "quickClickAudioFunction()">-->
 
                         <p style="margin-left:6px; z-index: 5000;" id="exitInfo"  class="iconHover infoNavElement" onclick="tabCloseSoundAudioFunction()"><strong>X</strong></p>
 
@@ -264,61 +263,58 @@
 
             <!--ABOUT THE PAGE-->
                 <div id="infoAboutDisplayWrap" class = "infoPicAbout infoElement menuOptionDisplayElement">
-                    <p><span class = "infoDescription" >    
+                    <p id="infoAboutDisplayContainer" ><span class = "infoDescription">    
                     Wavefm is a photo viewing platform which consists purely of vaporwave, cyberpunk and outrun images. </span><br>
                     <span class = "infoEnjoy">Enjoy the journey</span> <br>
                     <span class = "infoWavefm">wavefm</span></p>
                 </div>
 
             <!--HOW THE FK DO YOU OPERATE THIS THING?-->
-                <div id ="infoInstructionsDisplayWrap" class = "displayNone menuOptionDisplayElement infoElement">
-                    <div class = "infoPicControlsColumn">
+                <div id ="infoInstructionsDisplayWrap" class = "displayNone menuOptionDisplayElement infoElement" style="text-align: initial;">
+                    <div class = "infoPicControlsColumn" >
+                        <!-- DISPLAY TOGGLE INSTRUCTIONS -->
                         <div class = "infoPicControlsRow">
                             <img src = "Photos/Tool Photos/display grey.png" title = "change photo display" class = "infoImgMargin displayImg">
                                 <p><span class = "controlFont"><strong>Display:</strong> this button toggles between the 3 display modes.            
                                 </span></p>
-                        </div>
-                    </div><br>
-
-                    <div class = "infoPicControlsColumn">
+                        </div><br>
+                        <!-- PREFERENCES INSTRUCTIONS -->
                         <div class = "infoPicControlsRow">
                             <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon infoImgMargin" >
                                <p><span class = "controlFont"><strong>Preferences:</strong> when clicked, you can select to view either cyberpunk, vaporwave or outrun images.</span>          
                                 </p>
-                        </div>
-                    </div><br>
+                        </div><br>
 
-                    <div class = "infoPicControlsColumn">
                         <div class = "infoPicControlsRow">
                             <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg infoImgMargin" >
                                <p><span class = "controlFont"><strong>Movie mode:</strong> once activated, you enter a visually enticing slide show with 3 speeds to choose from.
                                </span> </p>
-                        </div>
-                    </div><br>
-
-                    <div class = "infoPicControlsColumn">
+                        </div><br>
+                        <!-- SOUND CONTROL INSTRUCTIONS -->
                         <div class = "infoPicControlsRow">
                             <img src = "Photos/Tool%20Photos/soundControl.png" class = "soundControlIcon infoImgMargin" >
                                <p><span class = "controlFont"><strong>Sound control:</strong> giving you the option to turn on/off and control the volume of music and sound effects.
                                </span> </p>
-                        </div>
-                    </div><br>
-
-                    <div class = "infoPicControlsColumn">
+                        </div><br>
+                        <!-- INFO MENU INSTRUCTIONS -->
                         <div class = "infoPicControlsRow">
-                            <img src ="Photos/Tool Photos/info.png" class = "infoPic infoImgMargin">
+                            <img src ="Photos/Tool Photos/info.png" class = "infoPic infoImgMargin" style="height: 37px; width: 37px">
                                <p><span class = "controlFont"><strong>Info mode:</strong> where you can find some information about wavefm.
                                 </span></p>
                         </div><br>
-                    <p style="margin:0 auto"> <span class = "controlFont"> <strong>HINT: use the search bar to fine-tune the type of images you would like to see.</strong></span></p>
+                        <!-- HINT -->
+                        <div class="infoPicControlsRow">
+                            <p style="margin:0 auto; text-align: center;"> <span class = "controlFont"> <strong>HINT: use the search bar to fine-tune the type of images you would like to see.</strong></span></p>
+                        </div>
+
                     </div>
                 </div>
 
             <!-- CONTACT US -->
                 <div id="infoContactDisplayWrap" class ="displayNone infoElement menuOptionDisplayElement">
                     <h1 class="contactFont"> Contact us.</h1>
-                    <p style="font-size: 3em;" id="emailLinkWords" class="zIndex5k">Feel free to email us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
-                    <div id="socialMediaLinksWrap" class="zIndex5k">
+                    <p  id="emailLinkWords" class="zIndex5k infoContactElement">Feel free to email us at <a href="mailto:wavefm@hotmail.com"><span id="emailLink">wavefm@hotmail.com</span></a></p>
+                    <div id="socialMediaLinksWrap" class="zIndex5k infoContactElement">
                         <img src="Photos/Tool Photos/instagram.png" class="socialMediaIcon">
                         <img src="Photos/Tool Photos/twitter.png" class="socialMediaIcon">
                         <img src="Photos/Tool Photos/facebook.png" class="socialMediaIcon">
@@ -338,7 +334,7 @@
 	------------------------------------------------------------------------------------->
 	<div class = "myView centered">
 <!--		<img src = "Photos/Tool%20Photos/arrow.png" id = "arrowOne" class = "arrow leftArrow displayNone">-->
-        <p  id = "arrowOne" class = "arrow visibilityNone leftArrow newArrow" >></p> 
+        <p  id = "arrowOne" class = "arrow visibilityNone leftArrow newArrow">></p> 
 
 			<div class ="myViewImageWrapper">
 <!-- CYBERPUNK SHOTS -->
@@ -603,45 +599,38 @@
 <!--GO TO TOP OF PAGE ICON-->
     <a href="#topScreen">
         <div class="topPageArrowContainer displayNone" onclick="normalClickAudioFunction()" title="Back to top of screen">
-            <p class = "topPageArrowIcon" onclick="scrollToTop()"><strong> &#62;</strong> </p>
-					<audio class = "normalClick" onclick="normalClickAudioFunction()"> <source src="Sound_Related/Button_Clicks/ButtonEject_Four.wav" type="audio/WAV"></audio>
+            <p class = "topPageArrowIcon arrow" onclick="scrollToTop()"><strong> &#62;</strong> </p>
+					<audio class = "normalClick" onclick="quickClickAudioFunction()"> <source src="Sound_Related/Button_Clicks/ButtonEject_Four.wav" type="audio/WAV"></audio>
         </div>
     </a>
 </div>
 
 <!--SMALL SCREEN ADAPTIVE ICON BAR-->
 
+    <div class = "blur"></div>
 
-<div class = "blur"></div>
+    <footer class="smallScreenBottomBar adaptiveTabButtons userSelectNone"> 
 
+            <!--adaptive display button image-->
+            <a>
+                <img src = "Photos/Tool Photos/display grey.png" class = "displayImg adaptiveDisplayButton" title = "change photo display" onclick="normalClickAudioFunction()">
+            </a>
 
-<footer class="smallScreenBottomBar adaptiveTabButtons userSelectNone"> 
+        <!--adaptive preferences button image-->
+            <a class = "off">
+                <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon adaptivePreferencesIcon off" id="adaptivePreferencesButton" >
+            </a>
 
-		<!--adaptive display button image-->
-		<a>
-			<img src = "Photos/Tool Photos/display grey.png" class = "displayImg adaptiveDisplayButton" title = "change photo display" onclick="normalClickAudioFunction()">
-		</a>
+        <!--adaptive moviemode button image-->
+            <a class = "off">
+                <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b movieModeButtonAdaptive off" id="adaptiveMovieModeButton" >
+            </a>
 
-	<!--adaptive preferences button image-->
-		<a class = "off">
-			<img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon adaptivePreferencesIcon off" id="adaptivePreferencesButton" >
-		</a>
-
-	<!--adaptive moviemode button image-->
-		<a class = "off">
-			<img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b movieModeButtonAdaptive off" id="adaptiveMovieModeButton" >
-		</a>
-
-		<!--adaptive soundContron image-->
-		<a>
-			<img src = "Photos/Tool Photos/soundControl.png" alt = "sound on/off" class = "adaptiveSoundControl soundControlIcon off" id="adaptiveSoundControlButton">
-		</a>
-</footer>
-<!--SMALLER SCREEN SIZE BOTTOM ICONS BAR-->
-<!--<script src="Javascript/Wave%20JS%2025.03.2020.js"></script>--> <!-- old JS file -->
-
-
-
+            <!--adaptive soundControl image-->
+            <a>
+                <img src = "Photos/Tool Photos/soundControl.png" alt = "sound on/off" class = "adaptiveSoundControl soundControlIcon off" id="adaptiveSoundControlButton">
+            </a>
+    </footer>
 
 </body>
 
