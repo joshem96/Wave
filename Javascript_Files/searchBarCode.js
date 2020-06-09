@@ -11,36 +11,19 @@
     var ORContainsImg = "no";
     var VWContainsImg = "no";
     var CPContainsImg = "no";
-//    var pImg = document.querySelectorAll(".pImg");
-//    var fbImg = document.querySelectorAll(".fbImg");
 
     //*****keypress function
-    
 
-		//[1] means you're not in search mode
-		//[2] means you're in search mode
         searchBox.addEventListener("keypress",searchFunction);
         function searchFunction(){
-          
-            //disables preference checkbox code and hides all images that may be on screen
-//            if (searchArray = [1]) {
-//
-////                displayNoneComViewImgs();
-//
-//////                preferencesButton.classList.add("buttonDisable");
-////                adaptivePreferencesButton.classList.add("buttonDisable");
-////                dnpc.classList.add("displayNone");
-//
-//                searchArray = [2];
-//			}
-
+            setTimeout( () => { 
                 //make all other views displayNone apart from the view you're in 
                 displayNoneAllImgs();
 
                 //create class out of the users input and add it to the DOM
                 searchWord = "." + (searchBox.value);
                 searchBoxValueClass = "";
- 
+
 				//only create class out of user input if input is longer than one word
                 if (searchWord.length > 1){
                     searchBoxValueClass = document.querySelectorAll(searchWord);
@@ -49,7 +32,7 @@
 				
                 //COMVIEW SEARCHBOX CODE
                 //..
-            
+                    
                 if ((currentView === "facebookView" || currentView === "pintrestView")===true){
                     setLoadImgNumber();
                     comViewWorkingArray = [];
@@ -70,7 +53,6 @@
 					}
 
 					//show all search input imgs pertaining to vaporwave if vaporwave cb is clicked
-
 					if (vaporWaveCB.classList.contains("checked")){
 						for (var i = 0; i<searchBoxValueClass.length; i++){
 							
@@ -115,87 +97,72 @@
                                 }
                                 //insert corresponding images in order; 0,1,2,3, etc
                                 else{ 
-                                comViewWorkingArray[i].parentNode.insertBefore(comViewWorkingArray[i], comViewWorkingArray[previousImg].nextSibling);//insert next img after last displayed img
+                                    comViewWorkingArray[i].parentNode.insertBefore(comViewWorkingArray[i], comViewWorkingArray[previousImg].nextSibling);//insert next img after last displayed img
                                 }
                                 comViewWorkingArray[i].classList.remove("displayNone");//display image
                             }
                         }
                     }
-            //if currentView is myView
-            }else{
-             
-            //MYVIEW SEARCHBOX CODE
-            //..............................................
+                //if currentView is myView
+                }else{
 
-                //displayNone arrows
-                leftArrow.classList.add("displayNone");
-                rightArrow.classList.add("displayNone");
-                //clear workingArray
-                workingArray = [];
+                //MYVIEW SEARCHBOX CODE
+                //..............................................
 
-                //set default myView variables (mmx, arrowCounter, picCounters etc)
-                myViewCounterReset();
+                    //displayNone arrows
+                    leftArrow.classList.add("displayNone");
+                    rightArrow.classList.add("displayNone");
+                    //clear workingArray
+                    workingArray = [];
 
-                //add all search input imgs pertaining to this style to working array, if this styles cb is checked
-                if (retroCB.classList.contains("checked")){
-                    for (var i = 0; i<searchBoxValueClass.length; i++){
+                    //set default myView variables (mmx, arrowCounter, picCounters etc)
+                    myViewCounterReset();
 
-                        if (searchBoxValueClass[i].classList.contains("mainImgRetro")) {	
-                            workingArray.push(searchBoxValueClass[i]);
-                            ORContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
-                        }        
+                    //add all search input imgs pertaining to this style to working array, if this styles cb is checked
+                    if (retroCB.classList.contains("checked")){
+                        for (var i = 0; i<searchBoxValueClass.length; i++){
+                            if (searchBoxValueClass[i].classList.contains("mainImgRetro")) {	
+                                workingArray.push(searchBoxValueClass[i]);
+                                ORContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
+                            }        
+                        }
                     }
-                }
-                
-                //add all search input imgs pertaining to this style to working array, if this styles cb is checked
-                if (vaporWaveCB.classList.contains("checked")){
-                    for (var i = 0; i<searchBoxValueClass.length; i++){
 
-                        if (searchBoxValueClass[i].classList.contains("mainImgVaporWave")) {	
-                            workingArray.push(searchBoxValueClass[i]);
-                            VWContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
-                        }        
+                    //add all search input imgs pertaining to this style to working array, if this styles cb is checked
+                    if (vaporWaveCB.classList.contains("checked")){
+                        for (var i = 0; i<searchBoxValueClass.length; i++){
+                            if (searchBoxValueClass[i].classList.contains("mainImgVaporWave")) {	
+                                workingArray.push(searchBoxValueClass[i]);
+                                VWContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
+                            }        
+                        }
                     }
-                }
 
-                //add all search input imgs pertaining to this style to working array, if this styles cb is checked
-                if (cyberPunkCB.classList.contains("checked")){
-                    for (var i = 0; i<searchBoxValueClass.length; i++){
-
-                        if (searchBoxValueClass[i].classList.contains("mainImgCyberPunk")) {	
-                            workingArray.push(searchBoxValueClass[i]);
-                            CPContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
-                        }        
+                    //add all search input imgs pertaining to this style to working array, if this styles cb is checked
+                    if (cyberPunkCB.classList.contains("checked")){
+                        for (var i = 0; i<searchBoxValueClass.length; i++){
+                            if (searchBoxValueClass[i].classList.contains("mainImgCyberPunk")) {	
+                                workingArray.push(searchBoxValueClass[i]);
+                                CPContainsImg = "yes"; //if this style contains an image pertaining to searchBoxvalue
+                            }        
+                        }
                     }
+                    
+                    //if workingArray contains any images
+                    //display workingArray[mmx] 
+                    //show arrows once workingArray consists of images/workingArray.length>1 
+                    if (workingArray[0]){
+                        //show myView L/Rnav arrows
+                        leftArrow.classList.remove("displayNone");
+                        rightArrow.classList.remove("displayNone");
+                        workingArray[mmx].classList.remove("displayNone");//display first img
+                        var imgsAfterMmx = workingArray.splice(1);//make array of images after mmx (displayed img)
+                        imgsAfterMmx.sort(function() { return 0.5 - Math.random() });//shuffle all imgs after workingArray[0]
+                        workingArray = workingArray.concat(imgsAfterMmx);
+                    }
+                    myViewArrowToggleFunction();//remove arrows if only one image is present
                 }
-
-                //add into working array all images with class of the user-value in searchBox
-                //show all search input for all cbs if they're all clicked or if none are clicked
-//                if ( (retroCB.classList.contains("checked") && vaporWaveCB.classList.contains("checked") && cyberPunkCB.classList.contains("checked") ) /*|| (retroCB.classList.contains("unchecked") && vaporWaveCB.classList.contains("unchecked") && cyberPunkCB.classList.contains("unchecked"))*/ ){ 
-//                // shows any image that relates to what is in the search box
-//                    for (var i = 0; i<searchBoxValueClass.length; i++){
-//                        if ( searchBoxValueClass[i].classList.contains("mainImg") ){
-//                            workingArray.push(searchBoxValueClass[i]);
-//
-//                        }
-//                    }
-//                }
-                
-                //if workingArray contains any images
-                //display workingArray[mmx] 
-                //show arrows once workingArray consists of images/workingArray.length>1  
-                if (workingArray[0]){
-                    workingArray.sort(function() { return 0.5 - Math.random() });//shuffle imgs
-                    //show myView L/Rnav arrows
-                    leftArrow.classList.remove("displayNone");
-                    rightArrow.classList.remove("displayNone");
-					workingArray[mmx].classList.remove("displayNone");//display first img
-                }
-
-
-
-            }
-               
+            }, 100);       
         }
     
 

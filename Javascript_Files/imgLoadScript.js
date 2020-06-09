@@ -76,12 +76,13 @@ function initScrollFunction(){
              pintrestView.classList.remove("displayNone"); //remove displayNone from fbView           
         }
 
-    },100);
+    },25);
 
 }
 
 
 //function that evokes when user has scrolled 1000px
+//displays new images (pretend fetch from server)
 window.addEventListener("scroll",scrollFunction);
 function scrollFunction(){
 
@@ -103,10 +104,10 @@ function scrollFunction(){
                     loadImg = loadImg + 16;
                 }
                 if ( (window.innerWidth > 700) && (window.innerWidth < 1099) ){
-                    loadImg = 30 + 30;//originally loadImg = 30 + 30
+                    loadImg = loadImg + 30;//originally loadImg = 30 + 30
                 }
                 if ( (window.innerWidth > 0) && (window.innerWidth < 699) ){
-                    loadImg = 16 + 16;//originally loadImg = 16 + 16
+                    loadImg = loadImg + 16;//originally loadImg = 16 + 16
                 }
             }
                 for (var i = 0; i < loadImg; i++){
@@ -117,8 +118,10 @@ function scrollFunction(){
                                 //var pertaining to the last image displayed
                                 var previousImg = i - 1;
                                 //insert corresponding images in ordely order; 0,1,2,3, etc
-                                comViewWorkingArray[i].parentNode.insertBefore(comViewWorkingArray[i], comViewWorkingArray[previousImg].nextSibling);//insert next img after last displayed img
-                                comViewWorkingArray[i].classList.remove("displayNone");//display img
+                                if (comViewWorkingArray[i+1]){
+                                    comViewWorkingArray[i].parentNode.insertBefore(comViewWorkingArray[i], comViewWorkingArray[previousImg].nextSibling);//insert next img after last displayed img
+                                    comViewWorkingArray[i].classList.remove("displayNone");//display img
+                                }
                             }
                         }
                     }

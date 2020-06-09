@@ -13,6 +13,7 @@
     var myView = document.querySelector(".myView");
 	var myViewImageWrapper = document.querySelector(".myViewImageWrapper");//myView images only, not including arrows
     var infoPicView = document.querySelector(".infoPicWrap");
+    var exitInfoButton = document.querySelector("#exitInfo");
     
 
     var menuOptionDisplayElement = document.querySelectorAll(".menuOptionDisplayElement");
@@ -26,6 +27,7 @@
     var infoMenuContact = document.querySelector("#menuOptionContact");
     var infoMenuElement = document.querySelectorAll(".infoMenuElement");
     var emailLinkWords = document.querySelector("#emailLinkWords");
+    var infoContactElement = document.querySelectorAll(".infoContactElement");
     var infoPicBrightnessFilter = document.querySelector("#infoPicBrightnessFilter");
 
     var displayButton = document.querySelector(".displayButton");

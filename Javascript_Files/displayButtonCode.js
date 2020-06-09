@@ -62,6 +62,7 @@
                         pintrestView.classList.remove("displayNone");
                         fbTimelineView.classList.add("displayNone");
                         currentView = "pintrestView";
+                        topPageArrowContainer.classList.add("displayNone");//hide top page nav arrow
 
                         if (searchBox.value.length > 1){
                             searchFunction();
@@ -127,9 +128,10 @@
 
                             }
 
+                            myViewArrowToggleFunction();//removes arrows if only one image is present in workingArray
+
                             //if movie mode is already running, switch it to faceboook-pintrest mode
                             if (movieModeImg.classList.contains("a")){
-//                                clearInterval(winScroll);
                                 for (var i = 0; i < radio.length; i++){
                                     if (radioOne.checked === true) {
                                         speed = 2000;
@@ -143,9 +145,6 @@
                                 } 
                                 ScrollFunction();
                             }
-
-
-
                         }
                         else{
                                 

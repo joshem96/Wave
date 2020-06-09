@@ -164,7 +164,6 @@
     function evokeScrollFunction(){
         if (movieModeImg.classList.contains("a")){
             ScrollFunction();
-            console.log("scroll bitch");
         }
     }
     
@@ -186,8 +185,6 @@
                     winScroll = setInterval(function() {
 
                         if (movieModeImg.classList.contains("b")){
-
-                            console.log("");
                             clearInterval(winScroll);
                         }
 
@@ -251,7 +248,7 @@
 
                             for (var i = 0; i <formCheckBox.length; i++){
 
-                                !formCheckBox[i].checked ? arrowX = 1: arrowY = 1;
+                                !formCheckBox[i].classList.contains("checked") ? arrowX = 1: arrowY = 1;
                             }
 
                             if ( (arrowX === 1) && (arrowY === 0) ){
@@ -289,18 +286,8 @@
         }
     }
 
-    //DISPLAY/REMOVE NAV TOP ARROW IF APPROPRIATE FUNCTION
-    //.........................................................................................................
-        //if movieModeToggle is off, currentView is fb or pin and workingArray has content, show nav arrow
-        if ( movieModeImg.classList.contains("b") && (currentView === "facebookView" || currentView === "pintrestView") && (workingArray>1) ){
-
-            clearInterval(winScroll);
-                //show nav arrow if user has scrolled more than 75px
-                if (window.pageYOffset > 75){
-                    topPageArrowContainer.classList.remove("displayNone");
-                }
-        }
-
+//TOP PAGE ARROW CONTAINER DISPLAYNONE TOOGLE
+//.....
         //"click" nav arrow and it will dissapear
         topPageArrowContainer.addEventListener("click",function(){
             if (!topPageArrowContainer.classList.contains("displayNone")){      

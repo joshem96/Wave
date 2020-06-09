@@ -11,7 +11,11 @@
             controlIcon.forEach( (controlIcon) => controlIcon.classList.add("off") );
             topNavBar.style.filter = "brightness(25%)";
             topNavBar.style.pointerEvents = "none";
-
+            //transition filter for adaptive mode bottom nav bar
+            if (window.innerWidth < 1100){
+                bottomBar.style.filter = "brightness(25%)";
+                bottomBar.style.pointerEvents = "none";  
+            }
             if (infoPicView.classList.contains("displayNone")){
                 infoPicView.classList.remove("displayNone");
                 photoViewSection.classList.add("displayNone");
@@ -22,7 +26,7 @@
         }
 
     //exit info section and return to whereever the uer was before clicking
-        var exitInfoButton = document.querySelector("#exitInfo");
+
 
     exitInfoButton.addEventListener("click",exitInfoFunction);
 
@@ -33,8 +37,12 @@
         photoViewSection.classList.remove("displayNone");
         infoButton.classList.remove("on");
         infoButton.classList.add("off");
+        //transition filter for adaptive mode bottom nav bar
+        if (window.innerWidth < 1100){
+            bottomBar.style.filter = "brightness(85%)";
+            bottomBar.style.pointerEvents = "";    
         }
-
+    }
 
     //INIT MENU ICON CLICK
     //.....
@@ -46,7 +54,7 @@
             infoMenuNavWrap.style.width = "250px";
             infoMenuNavWrap.style.opacity = "1";
             infoPicBrightnessFilter.style.opacity = "0.8";
-            emailLinkWords.classList.remove("zIndex5k");
+            infoContactElement.forEach( (contactElement) => contactElement.classList.remove("zIndex5k") );//reduce contactElements zindex to 0
         });
         
     //MENU OPTION HOVER COLOUR CODE
@@ -113,6 +121,8 @@
                         infoInstructionsDisplayWrap.classList.remove("displayNone");
                     }
                     if (ET.id === "menuOptionContact"){
+                        //increase contactElements zindex to 5000 so clickables are above brightness filter
+                        infoContactElement.forEach( (contactElement) => contactElement.classList.add("zIndex5k") );
                         infoContactDisplayWrap.classList.remove("displayNone");
                     }
                 }
