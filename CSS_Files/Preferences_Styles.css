@@ -1,0 +1,84 @@
+/**********************************************************/
+/*preference mode style properties
+*********************************************************/
+.preferencesIcon {
+    border: 3px solid black;
+    border-radius: 7px;
+    height: 34px;
+    width: 36px;
+}
+.prefContainer {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    font-size: 10px;
+    position: fixed;
+    right: 0;
+}
+.formBox { /* wrap around checkboxes */
+    align-self: flex-end;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-bottom: 3px solid #CD69C9;
+    border-radius: 15px 0px 0px 0px;
+    display: flex;
+    filter: brightness(85%);
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    height: 130px;
+    justify-content: space-evenly;
+    overflow: auto;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    right: 0;
+    text-transform: uppercase;
+    z-index: 60;   
+}
+.formCheckBoxBorder { /* border around checkboxes */
+    border: 2px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+}
+.newCheckBox { /* main checkbox area */
+    background-color: #eee;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 25px;
+    left: 0;
+    width: 25px;
+}
+.newCheckBox:hover {
+  filter: brightness(90%);
+}
+.fakeCheckBoxWrap { /* to row align the checkbox and its label */
+    display: flex;
+    flex-direction: row;
+}
+.checked {
+    background: forestgreen;
+}
+.unchecked {
+    background: #eee;
+}
+.clear-select { /* image reset wrap/container */
+    background: white;
+    bottom: 11;
+    border-radius: 0px 0px 15px 15px;
+    display: flex;
+    filter: brightness(90%);
+    justify-content: space-around;
+    padding: 8px;
+    position: relative;
+    right: 0;
+}
+#imageReset { /*image reset button */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    user-select: none;
+}
+#imageReset:active {
+    color: rgba(0,0,0,0.2);
+}

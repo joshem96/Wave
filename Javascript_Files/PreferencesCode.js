@@ -1266,7 +1266,7 @@
 //CLEAR ALL - CHECKBOX CODE
 //........................................................................................
 
-    var cBRefresh = document.querySelector(".imageReset");
+    var cBRefresh = document.querySelector("#imageReset");
 
     cBRefresh.addEventListener("click", clearAllFunction) 
 

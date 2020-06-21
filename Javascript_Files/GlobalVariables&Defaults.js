@@ -11,7 +11,7 @@
     var pintrestView = document.querySelector(".pintrestView");
     var fbTimelineView = document.querySelector(".fbTimeline");
     var myView = document.querySelector(".myView");
-	var myViewImageWrapper = document.querySelector(".myViewImageWrapper");//myView images only, not including arrows
+	var myViewImageWrapper = document.querySelector("#myViewImageWrapper");//myView images only, not including arrows
     var infoPicView = document.querySelector(".infoPicWrap");
     var exitInfoButton = document.querySelector("#exitInfo");
     
@@ -43,7 +43,7 @@
 	var soundControlContainer = document.querySelector(".soundControlContainer");
     var adaptiveSoundControlContainer = document.querySelector(".adaptiveSoundControlContainer");
 //    var infoArrow = document.querySelector(".infoArrow");
-    var photoViewSection = document.querySelector(".photoViewSection");
+    var photoViewSection = document.querySelector("#photoViewSection");
     var prefCheckBox = document.querySelector(".preferenceCheckbox");
     var movieModeToggleWrap = document.querySelector(".movieModeToggleWrap"); //button WRAP to turn on movie mode
     var movieModeToggle = document.querySelector(".movieModeToggle"); //button WRAP to turn on movie mode

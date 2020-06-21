@@ -1,0 +1,258 @@
+/**********************************************************************************************************************/
+/*MEDIA QUERY TIME YAY 
+**********************************************************************************************************************/
+
+/*****************************************************/
+/*ALL ADAPTIVE SIZING ADJUMSTMENTS FOR UNDER 1100PX (as soon as 1100 hits these adjustments are prolonged until window size > 1100)
+*****************************************************/
+@media only screen and (max-width: 1099px) {
+    .smallScreenBottomBar {
+        align-items: center;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content:space-around;
+        margin-bottom: 0;
+    }
+    .soundLevelBar {
+        border-radius: 0px;
+    }
+    .page-head {
+        height: auto;
+    }
+    .mainImg, .navIcon, .arrow {
+        display: none;
+    }
+    .soundLevelBar:hover {
+        filter: brightness(100%);
+    }
+    .arrow:hover {
+        opacity: 0.2;
+    }
+}
+/********************************************************/
+/*SELECTIVE ADAPTIVE IMAGE SIZING
+*******************************************************/
+
+/***************************/
+/*STANDARD SMARTPHONE SIZE
+***************************/
+@media only screen and (min-width: 0px) and (max-width: 499px) {
+    /* Global
+    ***************/    
+    .prefContainer, .soundControlContainer, .movieModeContainer {
+        top: 47px;
+    }   
+    /* Website logo
+    ***************/
+    .waveFm {
+        font-size: 28px;
+    }
+    /* Preference
+    ***************/
+    #imageReset {
+        font-size: 1em;
+        font-weight: 900;
+    }
+    /* Soundcontrol Style Properties
+    ***************/
+    .soundOnIconDesktop,.soundMuteIconDesktop {
+	   display: none;
+	}
+	.soundLevelBar {
+		width: 10px;
+	}
+	.sfxLevelContainer, .musicLevelContainer {
+		background-color: darkgrey;
+	}
+	.barOn {
+    	border: 1px solid forestgreen;
+	}
+    /* Infoview
+    ***************/
+    .infoPicControlsWrap {
+        font-size:24px
+    }
+    .infoEnjoy, #emailLinkWords, .infoDescription {
+        font-size: 2em;
+    }
+    .infoWavefm, .contactFont {
+        font-size: 4em;
+    }
+    .infoPicAbout {
+        margin-top: -10;    
+        width: auto;
+    }
+    .infoPicControlsColumn {
+        font-size: .80em;
+    }
+    .infoPic {
+        border: 3px solid black;
+        border-radius: 10px;
+        height: 30px;
+        width: 33px;
+    }
+    /* Comview stye properties
+    ***************/
+    .pImg {
+        width: 150px;
+    }
+    .fbTimeline{
+        top: 45px;
+        width: 340px;
+    }
+    .topPageArrowContainer {
+        margin: 0px 25px 20px 0px;
+    }
+    .topPageArrowIcon{
+        font-size: 6.0rem;
+    }
+    .topPageArrowIcon:active {
+        filter: brightness(80%);
+        margin: 0px 0px -0.5px -1px;
+        text-shadow: 1px 1px 30px #E5E4E2;
+    }
+}
+
+
+
+/***************************/
+/*LARGE SMARTPHONE SIZE
+***************************/
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+    /* Global
+    ***************/    
+    .prefContainer, .soundControlContainer, .movieModeContainer {
+        top: 50px;
+    }
+    /* Website logo
+    ***************/
+    .waveFm {
+        font-size: 30px;
+    }
+    /* Preference
+    ***************/
+    #imageReset {
+        font-size: 1em
+    }
+    /* Soundcontrol Style Properties
+    ***************/
+	.soundOnIconDesktop,.soundMuteIconDesktop {
+		display: none;
+    }
+	.soundLevelBar {
+		width: 10px;
+	}
+	.sfxLevelContainer, .musicLevelContainer {
+		background-color: darkgrey;
+	}
+	.barOn {
+    	border: 1px solid forestgreen;
+	}
+    /* Infoview
+    ***************/
+	.infoEnjoy, .infoDescription {
+		font-size: 1.5em;
+    }
+	.infoWavefm {
+		font-size: 4em;
+    }
+	.infoPicAbout {
+		width: auto;
+    }
+    /* Comview stye properties
+    ***************/
+    .fbTimeline { 
+        width: 440px; 
+        top: 45px;
+    }
+    .pImg { /* set pintrest images to a width of 150px */
+        width: 150px;
+    }
+    .topPageArrowContainer {
+        margin: 0px 25px 20px 0px;
+    }
+    .topPageArrowIcon:active {
+        filter: brightness(80%);
+        margin: 0px 0px -0.5px -1px;
+        text-shadow: 1px 1px 30px #E5E4E2;
+    }
+}
+
+
+/***************************/
+/*TABLET/IPAD SIZE
+***************************/
+@media only screen and (min-width: 700px) and (max-width: 1099px) {
+    /* Soundcontrol Style Properties
+    ***************/
+	.soundOnIconDesktop,.soundMuteIconDesktop {
+		display: none;
+    }
+	.soundLevelBar {
+		width: 10px;
+	}
+	.sfxLevelContainer, .musicLevelContainer {
+		background-color: darkgrey;
+	}
+	.barOn {
+    	border: 1px solid forestgreen;
+	}
+    /* Infoview
+    ***************/
+    .pImg {
+        width: 200px;
+    }
+	.infoDescription {
+		font-size: 2.5em;
+    }
+	.infoEnjoy{
+		font-size: 2em;
+    }
+	.contactFont {
+		font-size: 4em;
+    }
+	.infoWavefm, .contactFont {
+		font-size: 6em;
+    }
+	.infoPicAbout {
+		width: auto;
+    }
+    /* Comview stye properties
+    ***************/
+    .topPageArrowContainer {
+        margin: 0px 25px 20px 0px;
+    }
+    .topPageArrowIcon:active {
+        filter: brightness(80%);
+        margin: 0px 0px -0.5px -1px;
+        text-shadow: 1px 1px 30px #E5E4E2;
+    }
+}
+
+/***************************/
+/*SMALL LAPTOP SCREEN SIZE
+***************************/
+@media only screen and (min-width: 1100px) and (max-width: 1399px) {
+
+}
+
+/***************************/
+/*MEDIUM LAPTOP SCREEN SIZE
+***************************/
+@media only screen and (min-width: 1400px) and (max-width: 1859px) {
+
+}
+
+/***************************/
+/*LARGE LAPTOP SCREEN SIZE
+***************************/
+@media only screen and (min-width: 1860px) and (max-width: 5000px){
+    /*view image sizing 
+    *****************/
+    .mainImg{
+        width: 725px;
+    }
+    .fbTimeline {
+        width: 725px;
+    }
+}

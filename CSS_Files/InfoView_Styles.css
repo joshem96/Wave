@@ -1,0 +1,202 @@
+/**********************************************************/
+/*info mode style properties
+**********************************************************/
+#infoImgSource { /* actual "i" image thats used as button image */
+    border: 3px solid black;
+    border-radius: 8px;
+    top: 10px;
+    height: 37px;
+    width: 37px;
+}
+.infoPicContainer { /* container for main information section, that which appears after info button has been clicked */
+    background: white;
+    border: 5px solid dimgrey;
+    border-radius: 5px;
+    box-shadow: purple 0px 0px 30px 5px;
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    filter: brightness(85%);
+    height: 500px;
+    margin: 0 auto;
+    max-width: 900px;
+    overflow: auto;
+    overflow: hidden;
+    position: relative;
+}
+.infoPicCenter { /* centers the infoView in the center of the screen */
+    bottom: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#infoPicBrightnessFilter{ /* brightness filter for main information section, appears when info menu is open */
+    background: white;
+    filter: brightness(40%);
+    height: 100%;
+    position: absolute;
+    opacity: 0.0;
+    transition: opacity .5s;
+    z-index: 999;
+    width: 100%;
+}
+.infoPicSizeAdjust { /*orignalliy .infoPicControlsColumn, helps make each info display width consistent */
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-left: 8px;
+    position: relative;
+}
+.infoPicRow { /* used to row align specific elements */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding-top: 5px;
+    position: relative;
+    width: 100%;
+}
+/******************************/
+/*NAVIGATION option style properties (exit & menu button, pop-up menu options)
+******************************/
+.infoPicNavigationRow { /* used to put the menu and exit buttons at opposite sides of info container */
+    display: flex;
+    justify-content: space-between;   
+}
+.infoNavElement { 
+    color: black; 
+    font-family: 'nunito', monospace;
+    font-size:1.5em; 
+    font-size: 2.3rem;
+}
+#infoMenuIcon {
+    margin-right: 18px;
+    margin-top: 2.5px;
+    position: relative;
+    width: 40px;
+}
+#infoMenuNav { /* "pop out" menu with different options for info view, instructions, contact etc */
+    background: white;
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: -5px 5px 18px 2px lightgrey;
+    display: flex;
+    filter: brightness(85%);
+    flex-direction: column;
+    height: 180px;
+    justify-content: center;
+    overflow: auto;
+    overflow-x: hidden;
+    opacity: 0.0;
+    position: absolute;
+    top: 0px;
+    transition: width .5s;
+    right: 0px;
+    width: 1px;
+}
+.infoMenuElement:hover{ /* eg "instructions" in the pop-up menu in info view */
+    cursor: pointer;
+}
+.menuElementSelected { /* make background of menu option purple when selected */
+    background: rgba(95, 31, 168, .7);
+    box-shadow: 0px 0px 20px 0px rebeccapurple;
+}
+.infoWavefm, .infoEnjoy, infoDescription, infoPicControlsRow, .contactFont{
+    opacity: 0.7;
+}
+/******************************/
+/*ABOUT option style properties
+******************************/
+.infoPicAbout { /* wrap for about section in info mode */
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+}
+.infoDescription { /* description style properties */
+    color: black;
+    font-size: 3em;
+    line-height: 1.1;
+}
+.infoEnjoy { /* "enjoy the journey" style properties */
+    align-self: center;
+    color: black;
+    font-size: 2.5em;
+    line-height: 2.5em;
+    font-family: 'Press Start 2P', cursive;
+}
+.infoWavefm { /* website logo style properties */
+    color: darkviolet;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 7em;
+}
+/******************************/
+/*INSTRUCTIONS option style properties
+******************************/
+#infoInstructionsDisplayWrap { /* wrap for instructions section in info mode */
+    display: flex;    
+    height: 100%;
+    position: relative;
+    text-align: initial;
+}
+.infoImgMargin { /* extra aignment for the instruction rows */
+    margin: 5px 10px 5px 3px;
+}
+.controlFont { /* font style for instructions in infoView */
+    color: black;
+    font-size: 1.1em;
+}
+/******************************/
+/*CONTACT option style properties
+******************************/
+.infoDescription, .contactFont {
+    font-family: 'nunito';
+}
+#infoContactDisplayWrap { /* contact section wrap */
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    justify-content: space-between;
+    overflow: auto;
+    position: relative;
+    top: 0;
+    text-align: center;
+}
+.contactFont { /*for word "contact" */
+    font-size: 7em;
+    margin: 0;
+}
+#emailLinkWords { /*for words before m email link "feel free to contact us at.." */
+    font-size: 3em;
+}
+#emailLink { /*for word website email link */
+    color: rebeccapurple;
+    transition: color .5s;
+}
+#emailLink:hover { /*for word website email link */
+    color: darkviolet
+}
+#socialMediaLinksWrap { /* wrap for social media icons*/
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    width: 350px;
+}
+#comingSoon { /* for "coming soon" which displays on hover over social media icons*/
+    align-self: center;
+    opacity: 0.0;
+    position: absolute;
+}
+#comingSoon:hover {
+    opacity: 0.8;
+    cursor: context-menu;
+}
+.socialMediaIcon {
+    opacity: 0.3;
+    width: 50px;
+}
