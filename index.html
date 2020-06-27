@@ -78,14 +78,14 @@
                     </div>
                 </div>
                 <!--INFO ICON-->
-                <div class = "iconMargin iconHover navIconTwo infoButton off" title = "information about wavefm">
+                <div class = "iconMargin iconHover navIconTwo infoButton off" id ="websiteLogo" title = "information about wavefm">
                     <a>
                        <img src ="Photos/Tool Photos/info.png" id="infoImgSource" style = "margin-right: 10px;">
                     </a>
                 </div>
             </div>
             <!-- PURPLE BAR UNDERNEATH HEADER BAR / INTERFACE -->
-            <img src = "Photos/Tool Photos/wave bar line new.png" id = "waveLine" class = "positionFix">
+            <img src = "Photos/Tool Photos/wave bar line new.png" id = "waveLine" class = "positionFix zIndex5K topBarWaveLine">
         </header>
         <!--PREFERANCE CHECKBOX / PREFERNCE CONTROLS CONSOLE-->
         <div class = "dnPrefContainer controlTab displayNone">
@@ -118,9 +118,9 @@
                     </div>
                 </div>
                 <!-- IMAGE RESET BUTTON -->
-                <div class="clear-select" onclick="innerButtonClickAudioFunction()">
+                <div class="clear-select" >
                     <audio class="innerButtonClickAudio"><source src="Sound_Related/Button_Clicks/ButtonEject_Three.wav" type="audio/WAV"></audio>
-                    <button class="buttonStyle" id="imageReset">image reset</button>
+                    <button class="buttonStyle" id="imageReset" onclick="innerButtonClickAudioFunction()">image reset</button>
                 </div>
             </div>
         </div>
@@ -678,26 +678,35 @@
             </div>
         </a>
     </div>
+    
 
-    <!--SMALL SCREEN ADAPTIVE ICON BAR-->  <!--<div class = "blur"></div> IDK WHAT THIS IS HAHAHA-->
-    <footer class="smallScreenBottomBar adaptiveTabButtons userSelectNone"> 
-        <!--adaptive display button image-->
-        <a>
-            <img src = "Photos/Tool Photos/display grey.png" class = "displayImg adaptiveDisplayButton" title = "change photo display" onclick="normalClickAudioFunction()">
-        </a>
-        <!--adaptive preferences button image-->
-        <a class = "off">
-            <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon adaptivePreferencesIcon off" id="adaptivePreferencesButton" >
-        </a>
-        <!--adaptive moviemode button image-->
-        <a class = "off">
-            <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b movieModeButtonAdaptive off" id="adaptiveMovieModeButton">
-        </a>
-        <!--adaptive soundControl image-->
-        <a>
-            <img src = "Photos/Tool Photos/soundControl.png" alt = "sound on/off" class = "adaptiveSoundControl soundControlIcon off" id="adaptiveSoundControlButton">
-        </a>
-    </footer>
+    
+    <!--SMALL SCREEN ADAPTIVE ICON BAR-->  <!-- IDK WHAT THIS IS HAHAHA-->
+<!--    <div class = "blur"></div>-->
+    <!-- bottom wave bar line -->
+
+
+        <footer class="smallScreenBottomBar adaptiveTabButtons userSelectNone zIndex5K"> 
+            <img src = "Photos/Tool Photos/wave bar line new.png" id = "waveLine" class = "bottomBarWaveLine positionFix zIndex5K">
+            <!--adaptive display button image-->
+            <div class="iconWrap" style="width: 100%; justify-content: space-around;">
+                <a>
+                    <img src = "Photos/Tool Photos/display grey.png" class = "displayImg adaptiveDisplayButton" title = "change photo display" onclick="normalClickAudioFunction()">
+                </a>
+                <!--adaptive preferences button image-->
+                <a class = "off">
+                    <img src="Photos/Tool%20Photos/preferancesIon.png" class = "preferencesIcon adaptivePreferencesIcon off" id="adaptivePreferencesButton" >
+                </a>
+                <!--adaptive moviemode button image-->
+                <a class = "off">
+                    <img src = "Photos/Tool Photos/play black.png" class = "moviemodeImg b movieModeButtonAdaptive off" id="adaptiveMovieModeButton">
+                </a>
+                <!--adaptive soundControl image-->
+                <a>
+                    <img src = "Photos/Tool Photos/soundControl.png" alt = "sound on/off" class = "adaptiveSoundControl soundControlIcon off" id="adaptiveSoundControlButton">
+                </a>
+            </div>
+        </footer>
     
 </body>
 

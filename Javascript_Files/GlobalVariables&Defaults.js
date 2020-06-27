@@ -39,6 +39,7 @@
 	var soundControlButton = document.querySelector(".soundControlButton");
 	var adaptiveSoundControlButton = document.querySelector(".adaptiveSoundControl");
     var infoButton = document.querySelector(".infoButton");
+
 	
 	var soundControlContainer = document.querySelector(".soundControlContainer");
     var adaptiveSoundControlContainer = document.querySelector(".adaptiveSoundControlContainer");

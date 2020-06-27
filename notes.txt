@@ -1,0 +1,48 @@
+CURRENT 8.06.2020
+- clean and organise js files
+- commit to git previous changes (scroll y, wavefm button code, img resize)
+JAVASSCRIPT
+- make click img pop out code
+- comView arraw doesn't shuffle all imgs after loadImg when new checkbox checked
+
+---
+
+MINIMAL ISSUE BUGS//DO LATER
+- prefbox code seems to take out 1 extra img when declicked. something to do with remaindingImgArray
+- when you backspace in searchBox, you lose an image when it does the INIT function
+- in comView/pintrest, for example: if i click cyberpunk (12 imgs) then click vaporwave (5imgs) 
+and scroll down (making loadImg 32 and displayed 17). then I click cyberpunk. it adds 14 imgs
+to be displayed on screen (because fillRemaindIng img works on logic of if new cb's are click 
+and displayed < loadImg then add loadImg number of imgs)
+If i then declick cyberpunk (making loadImg 17, because loadImg = displayed when cb declicked)
+and then click it again. I dont get images popping up like I did before because !displayed<loadImg
+- pimg -> myView i lose an image in workingArray
+-Occasionally when hitting the next arrow in myView itll trigger it repeditively
+
+---	
+
+CLEAN UP DO 
+- change ".waveFm" and its variables to something like ".websiteLogo" or even make it an ID
+
+---
+
+POSSIBLE DO/DO LATER:
+-pop up tag reminder when the photoViewSection is empty for more than 5s of where prefbox is
+	-this repeats every 10s for intervals of like 3s
+-possibly make a purple div to cover entire screen that gets removed upon load after 300-500ms
+-make new name and logo
+-change all nav arrows to img
+- J and K comview facebook navigation
+-if x is clicked in infoView and the menu is open, close menu and set brightness filter to 0
+- make space bar start and stop for movie mode
+-in myView, when at either start or end remove neccesary nav arrow
+-make a tabDisplay type code for topPageNavArrow, where when you have scrolled more than like 100px
+  make it appear after no user interaction for like 5-10seconds
+-"click and drag" for volume sound control
+-find some transparent images
+-make images fade in when you scroll them in
+- optimize images onload (make it only resize workingArray images firs then do others once screen has
+	loaded)
+-make widths when styling the images to fit page (see functions on load)
+	AUDIO:
+		- make electronic soundfx and A/B between the two

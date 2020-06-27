@@ -13,7 +13,7 @@ function initScrollFunction(){
 
         //hide all images
         comViewWorkingArray = [];
-        displayNoneAllImgs();
+//        displayNoneAllImgs();
         setLoadImgNumber();
 
 

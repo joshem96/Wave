@@ -39,7 +39,7 @@
         infoButton.classList.add("off");
         //transition filter for adaptive mode bottom nav bar
         if (window.innerWidth < 1100){
-            bottomBar.style.filter = "brightness(85%)";
+            bottomBar.style.filter = "";
             bottomBar.style.pointerEvents = "";    
         }
     }

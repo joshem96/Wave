@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    top: 0;
+/*    top: 0;*/
     width: 100%;
 }
 #infoPicBrightnessFilter{ /* brightness filter for main information section, appears when info menu is open */

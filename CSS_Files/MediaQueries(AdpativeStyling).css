@@ -6,12 +6,12 @@
 /*ALL ADAPTIVE SIZING ADJUMSTMENTS FOR UNDER 1100PX (as soon as 1100 hits these adjustments are prolonged until window size > 1100)
 *****************************************************/
 @media only screen and (max-width: 1099px) {
-    .smallScreenBottomBar {
-        align-items: center;
+    .bottomBarWaveLine {
         display: flex;
-        flex: 1 1 auto;
-        justify-content:space-around;
-        margin-bottom: 0;
+    }
+
+    .smallScreenBottomBar {
+        display: flex;
     }
     .soundLevelBar {
         border-radius: 0px;
@@ -19,7 +19,7 @@
     .page-head {
         height: auto;
     }
-    .mainImg, .navIcon, .arrow {
+    .mainImg, .navIcon, .arrow, #bottommBarWaveLine {
         display: none;
     }
     .soundLevelBar:hover {
@@ -27,6 +27,10 @@
     }
     .arrow:hover {
         opacity: 0.2;
+    }
+    .infoPicCenter {
+        top: 0;
+        bottom: 0;
     }
 }
 /********************************************************/
@@ -40,8 +44,17 @@
     /* Global
     ***************/    
     .prefContainer, .soundControlContainer, .movieModeContainer {
-        top: 47px;
-    }   
+        top: 57.1px;
+    }  
+    .page-head {
+        height: 53px;
+    }
+    .topBarWaveLine {
+        margin-top: 3.5px !important;
+    }
+    #waveline {
+        height: 5px;
+    }
     /* Website logo
     ***************/
     .waveFm {

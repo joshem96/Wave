@@ -39,9 +39,9 @@ p:focus {outline:0;}
 html {
   	background: linear-gradient(rgba(59,39,36,0.8),rgba(59,39,36,0.8)), url(../Photos/background.png) center center fixed;
 	background-size: cover;
-    height: 100%;
-    height: 100%;
     background-repeat: repeat;
+    height: 100%;
+    overflow-y: scroll;    
 }
 .row {
     display: flex;
@@ -69,22 +69,7 @@ html {
 }
 .displayNone { /* obvious */
     display: none !important;
-}
-.smallScreenBottomBar { /* adaptive mode bottom bar, where majority of buttons go in adapative mode*/
-    align-self: center;
-	background-color: white;
-	bottom: 0;
-    display: none;
-	filter: brightness(85%);
-	flex-grow: 1;
-	flex-direction: row;
-    height: 53px;
-	margin: 0 auto;
-	position: fixed;
-    transition: filter .5s;
-	width: 100%;
-	z-index: 500;
-}
+}    
 .imgZ { /* pull z-index back -30 */
     z-index: -30;
 }
@@ -94,6 +79,16 @@ html {
 .buttonDisable{
     pointer-events: none;
 }
+.blur { /* white blur at bottom of screen (hidden for now, dont know if i want it) */
+    position: fixed;
+    filter: blur(15px);
+    height: 10px;
+    width: 100%;
+    background: white;
+    bottom: 0px;
+    z-index: 500;
+}
+/********************************************************/
 /* other/global -
 ********************************************************/
 a img:active {
@@ -106,4 +101,31 @@ a img:active {
 }
 .iconMargin {
     margin-left: 5px;
+}
+/* STYLES ONLY FOR ADAPTIVE
+*********************************************************/
+.bottomBarWaveLine {
+/*    align-self: flex-start;*/
+    display: none;
+/*    top: -10.5px;*/
+    bottom: 50.5px;
+}
+.smallScreenBottomBar { /* adaptive mode bottom bar, where majority of buttons go in adapative mode*/
+    align-items: center;
+    align-self: center;
+	background-color: white;
+	bottom: 0;
+    display: none;
+	filter: brightness(85%);
+    flex: 1 1 auto;
+	flex-grow: 1;
+	flex-direction: column;
+    height: 52px;
+    justify-content: space-around;
+	margin: 0 auto;
+    margin-bottom: 0;
+	position: fixed;
+    transition: filter .5s;
+	width: 100%;
+	z-index: 500;
 }
