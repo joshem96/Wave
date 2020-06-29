@@ -1,9 +1,11 @@
+RECENTLY FIXED AND NOT COMMITED
+- shuffle images in comview bug
+
 CURRENT 8.06.2020
 - clean and organise js files
-- commit to git previous changes (scroll y, wavefm button code, img resize)
 JAVASSCRIPT
 - make click img pop out code
-- comView arraw doesn't shuffle all imgs after loadImg when new checkbox checked
+- in myView, when at either start or end remove neccesary nav arrow and minimse it a bit
 
 ---
 
@@ -35,7 +37,7 @@ POSSIBLE DO/DO LATER:
 - J and K comview facebook navigation
 -if x is clicked in infoView and the menu is open, close menu and set brightness filter to 0
 - make space bar start and stop for movie mode
--in myView, when at either start or end remove neccesary nav arrow
+
 -make a tabDisplay type code for topPageNavArrow, where when you have scrolled more than like 100px
   make it appear after no user interaction for like 5-10seconds
 -"click and drag" for volume sound control

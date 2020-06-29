@@ -39,11 +39,15 @@
 
     var times = 0;
     var displayed;
+    
     //keeps track of how madeny checkboxes are checked, if none are checked it equals 0, if all are checked it equals 3 etc
     var checkedCbCounter = 1;
 
             //this code toggles the checkboxes being shown or not depending on if their box is checked or unchecked
-            formBox.addEventListener("click",function(e){
+            formBox.addEventListener("click", (e) => {
+        
+                findNumberOfDisplayedImgs();
+                
                 if (e.target.classList.contains("formCheckBox")){
 
                     ++times;
@@ -73,17 +77,18 @@
                     //PIMG AND FACEBOOK VIEW CHECKBOX CODE
                     if(formBox.classList.contains("comViewOn")){
 
-                    findNumberOfDisplayedImgs();
+//                        findNumberOfDisplayedImgs();
 
                       //shuffling non-displayed imgs with the new images being added to comViewWorkingArray
                      if (e.target.classList.contains("checked")){
+                         
                          var remaindingImgNumber = comViewWorkingArray.length - displayed;
                          var remaindingImgArray;//array that contains images with class of displayNone
                          // remove the remaindingImgArray images from ComViewWorkingArray, after the last displayed Img (loadImg)
                          remaindingImgArray = comViewWorkingArray.splice(loadImg,remaindingImgNumber);
                          //^^ then add those remainding images into another array along with checked the new cb array(eg fbRetro)
                      }
-
+                        
                         //IF NOT IN SEARCH MODE
                         if (searchBox.value.length < 1){
 
@@ -109,12 +114,13 @@
                                       else if (currentView ==="pintrestView"){
                                           remaindingImgArray = remaindingImgArray.concat(pImgRetro);                                  
                                       }
-
+                                      
                                       //shuffle remainding images and newly added images
                                       remaindingImgArray.sort(function() { return 0.5 - Math.random() });
 
                                       //push remainding images and new images to comViewWorkingArray
                                       comViewWorkingArray = comViewWorkingArray.concat(remaindingImgArray);
+                                      
                                   }
 
                                   if (targetID === "vaporWave"){
@@ -152,6 +158,7 @@
                                    }
                                     findNumberOfDisplayedImgs();//find num of imgs displayed
                                     fillRemaindingImgSpace();//if comViewWorkingArrays displayed Imgs < loadImg (default # of imgs on screen)
+                                    
                                 }
 
                                //CHECKED -> UNCHECKED
@@ -240,7 +247,7 @@
                                     }
 
                                     //reset loadImg, to make sure its consistent
-                                    var displayed = 0;//f
+                                    displayed = 0;//f
                                     for (var i = 0; i< comViewWorkingArray.length; i++){
                                         if (!comViewWorkingArray[i].classList.contains("displayNone")){
                                             displayed++//number of imags that are displayed
@@ -448,7 +455,7 @@
                                     }
 
                                     //reset loadImg, to make sure its consistent
-                                    var displayed = 0;//f
+                                    displayed = 0;//f
                                     for (var i = 0; i < comViewWorkingArray.length; i++){
                                         if (!comViewWorkingArray[i].classList.contains("displayNone")){
                                             displayed++//number of imags that are displayed
@@ -525,7 +532,7 @@
                                     }
 
                                     //reset loadImg, to make sure its consistent
-                                    var displayed = 0;//f
+                                    displayed = 0;//f
                                     for (var i = 0; i < comViewWorkingArray.length; i++){
                                         if (!comViewWorkingArray[i].classList.contains("displayNone")){
                                             displayed++//number of imags that are displayed

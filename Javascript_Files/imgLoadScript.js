@@ -118,7 +118,7 @@ function scrollFunction(){
                                 //var pertaining to the last image displayed
                                 var previousImg = i - 1;
                                 //insert corresponding images in ordely order; 0,1,2,3, etc
-                                if (comViewWorkingArray[i+1]){
+                                if (comViewWorkingArray[i+1].classList.contains("img")){
                                     comViewWorkingArray[i].parentNode.insertBefore(comViewWorkingArray[i], comViewWorkingArray[previousImg].nextSibling);//insert next img after last displayed img
                                     comViewWorkingArray[i].classList.remove("displayNone");//display img
                                 }
