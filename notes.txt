@@ -1,15 +1,48 @@
 RECENTLY FIXED AND NOT COMMITED
 - shuffle images in comview bug
+- final little errors in comview pref code  (undefined images trying to get through)
+- removing arrow code when at start or end of workingArray
+- also made arrow font size go smaller then back to normal when clicked
+- added in 2 new vaporwave images
+- changed arrow to image and cleaned up the styling properties (incl hover, active etc)
+- Adaptive mode; 
+	- added display none temporarily after display btn pressed to hide imgs shuffling
+- cleaned remaining code (javascript)
+	- globalVariables&Defaults.js
+	- globalFunctions.js
+	- functionsOnLoad.js
+	- displayButtonCode.js
+	- ImgLoadScript.js
+	- InfoAboutCode.js
+	- movieModeCode.js
+	- arrowCode.js
+	- searchBarCode.js
+	- preferencesCode.js 
+	- wavefmLogoCode.js 
+	- tabDisplayCode.js
+	- soundCode.js
+- made nav arrow appear on scroll down, but disappear when you scroll up and added a transition effect
+- fixed nav arrow bug of appearing on first scroll after clicking displayButton 
+- put displayButton sound on info mode button and also add quickclick(?) sound to exit button in info view
 
-CURRENT 8.06.2020
-- clean and organise js files
+CURRENT 2.07.2020
+- put through linter?
 JAVASSCRIPT
-- make click img pop out code
-- in myView, when at either start or end remove neccesary nav arrow and minimse it a bit
+BUGS
+- continue setting up git for mac (its installed, just gotta find wave)
+- clean and organise js files 
+	- make a README file explaining workingArray etc 
+
+
+HTML
+add further semantics
 
 ---
 
 MINIMAL ISSUE BUGS//DO LATER
+- prefbox still has bug that will crash website 
+- left/right arrow doesn’t do width transition when going to first or last image
+- TP nag arrow could use a little more love, bugs out about 10% of the time 
 - prefbox code seems to take out 1 extra img when declicked. something to do with remaindingImgArray
 - when you backspace in searchBox, you lose an image when it does the INIT function
 - in comView/pintrest, for example: if i click cyberpunk (12 imgs) then click vaporwave (5imgs) 
@@ -20,6 +53,8 @@ If i then declick cyberpunk (making loadImg 17, because loadImg = displayed when
 and then click it again. I dont get images popping up like I did before because !displayed<loadImg
 - pimg -> myView i lose an image in workingArray
 -Occasionally when hitting the next arrow in myView itll trigger it repeditively
+	PHOTOSHOP
+	- change/redo sound mute icons
 
 ---	
 
@@ -37,7 +72,7 @@ POSSIBLE DO/DO LATER:
 - J and K comview facebook navigation
 -if x is clicked in infoView and the menu is open, close menu and set brightness filter to 0
 - make space bar start and stop for movie mode
-
+- transition effect in movie mode for myView
 -make a tabDisplay type code for topPageNavArrow, where when you have scrolled more than like 100px
   make it appear after no user interaction for like 5-10seconds
 -"click and drag" for volume sound control
@@ -46,5 +81,8 @@ POSSIBLE DO/DO LATER:
 - optimize images onload (make it only resize workingArray images firs then do others once screen has
 	loaded)
 -make widths when styling the images to fit page (see functions on load)
+- make pref code like a toggle/or, and to add more to working/comviewArry you need to hold cb for 2s
 	AUDIO:
 		- make electronic soundfx and A/B between the two
+	CSS
+	- make arrows bigger/smaller depending on screen size?

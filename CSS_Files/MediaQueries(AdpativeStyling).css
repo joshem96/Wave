@@ -5,126 +5,129 @@
 /*****************************************************/
 /*ALL ADAPTIVE SIZING ADJUMSTMENTS FOR UNDER 1100PX (as soon as 1100 hits these adjustments are prolonged until window size > 1100)
 *****************************************************/
-@media only screen and (max-width: 1099px) {
-    .bottomBarWaveLine {
-        display: flex;
-    }
+    @media only screen and (max-width: 1099px) {
+        .bottomBarWaveLine {
+            display: flex;
+        }
 
-    .smallScreenBottomBar {
-        display: flex;
+        .smallScreenBottomBar {
+            display: flex;
+        }
+        .soundLevelBar {
+            border-radius: 0px;
+        }
+        .page-head {
+            height: auto;
+        }
+        .mainImg, .navIcon, #arrowOne, #arrowTwo, #bottommBarWaveLine {
+            display: none;
+        }
+        .soundLevelBar:hover {
+            filter: brightness(100%);
+        }
+        .arrow:hover {
+            opacity: 0.2;
+        }
+        .infoPicCenter {
+            top: 0;
+            bottom: 0;
+        }
     }
-    .soundLevelBar {
-        border-radius: 0px;
-    }
-    .page-head {
-        height: auto;
-    }
-    .mainImg, .navIcon, .arrow, #bottommBarWaveLine {
-        display: none;
-    }
-    .soundLevelBar:hover {
-        filter: brightness(100%);
-    }
-    .arrow:hover {
-        opacity: 0.2;
-    }
-    .infoPicCenter {
-        top: 0;
-        bottom: 0;
-    }
-}
 /********************************************************/
 /*SELECTIVE ADAPTIVE IMAGE SIZING
 *******************************************************/
 
-/***************************/
-/*STANDARD SMARTPHONE SIZE
-***************************/
-@media only screen and (min-width: 0px) and (max-width: 499px) {
-    /* Global
-    ***************/    
-    .prefContainer, .soundControlContainer, .movieModeContainer {
-        top: 57.1px;
-    }  
-    .page-head {
-        height: 53px;
+    /***************************/
+    /*STANDARD SMARTPHONE SIZE
+    ***************************/
+    @media only screen and (min-width: 0px) and (max-width: 499px) {
+        /* Global
+        ***************/    
+        .prefContainer, .soundControlContainer, .movieModeContainer {
+            top: 57.1px;
+        }  
+        .page-head {
+            height: 53px;
+        }
+        .topBarWaveLine {
+            margin-top: 3.5px !important;
+        }
+        #waveline {
+            height: 5px;
+        }
+        /* Website logo
+        ***************/
+        .waveFm {
+            font-size: 28px;
+        }
+        /* Preference
+        ***************/
+        #imageReset {
+            font-size: 1em;
+            font-weight: 900;
+        }
+        /* Soundcontrol Style Properties
+        ***************/
+        .soundOnIconDesktop,.soundMuteIconDesktop {
+           display: none;
+        }
+        .soundLevelBar {
+            width: 10px;
+        }
+        .sfxLevelContainer, .musicLevelContainer {
+            background-color: darkgrey;
+        }
+        .barOn {
+            border: 1px solid forestgreen;
+        }
+        /* Infoview
+        ***************/
+        .infoPicControlsWrap {
+            font-size:24px
+        }
+        .infoEnjoy, #emailLinkWords, .infoDescription {
+            font-size: 2em;
+        }
+        .infoWavefm, .contactFont {
+            font-size: 4em;
+        }
+        .infoPicAbout {
+            margin-top: -10;    
+            width: auto;
+        }
+        .infoPicControlsColumn {
+            font-size: .80em;
+        }
+        .infoPic {
+            border: 3px solid black;
+            border-radius: 10px;
+            height: 30px;
+            width: 33px;
+        }
+        /* Comview stye properties
+        ***************/
+        .pImg {
+            width: 150px;
+        }
+        .fbTimeline{
+            top: 45px;
+            width: 340px;
+        }
+        .topPageArrowContainer {
+            margin: 0px 25px 20px 0px;
+        }
+        .topPageArrowIcon{
+/*            font-size: 6.0rem;*/
+			width: 70px;
+			opacity: 0.6;
+        }
+        .topPageArrowIcon:active {
+            filter: brightness(80%);
+            margin: 0px 0px -0.5px -1px;
+            text-shadow: 1px 1px 30px #E5E4E2;
+			opacity: 0.8;
+        }
     }
-    .topBarWaveLine {
-        margin-top: 3.5px !important;
-    }
-    #waveline {
-        height: 5px;
-    }
-    /* Website logo
-    ***************/
-    .waveFm {
-        font-size: 28px;
-    }
-    /* Preference
-    ***************/
-    #imageReset {
-        font-size: 1em;
-        font-weight: 900;
-    }
-    /* Soundcontrol Style Properties
-    ***************/
-    .soundOnIconDesktop,.soundMuteIconDesktop {
-	   display: none;
-	}
-	.soundLevelBar {
-		width: 10px;
-	}
-	.sfxLevelContainer, .musicLevelContainer {
-		background-color: darkgrey;
-	}
-	.barOn {
-    	border: 1px solid forestgreen;
-	}
-    /* Infoview
-    ***************/
-    .infoPicControlsWrap {
-        font-size:24px
-    }
-    .infoEnjoy, #emailLinkWords, .infoDescription {
-        font-size: 2em;
-    }
-    .infoWavefm, .contactFont {
-        font-size: 4em;
-    }
-    .infoPicAbout {
-        margin-top: -10;    
-        width: auto;
-    }
-    .infoPicControlsColumn {
-        font-size: .80em;
-    }
-    .infoPic {
-        border: 3px solid black;
-        border-radius: 10px;
-        height: 30px;
-        width: 33px;
-    }
-    /* Comview stye properties
-    ***************/
-    .pImg {
-        width: 150px;
-    }
-    .fbTimeline{
-        top: 45px;
-        width: 340px;
-    }
-    .topPageArrowContainer {
-        margin: 0px 25px 20px 0px;
-    }
-    .topPageArrowIcon{
-        font-size: 6.0rem;
-    }
-    .topPageArrowIcon:active {
-        filter: brightness(80%);
-        margin: 0px 0px -0.5px -1px;
-        text-shadow: 1px 1px 30px #E5E4E2;
-    }
-}
 
 
 
@@ -236,7 +239,7 @@
         margin: 0px 25px 20px 0px;
     }
     .topPageArrowIcon:active {
-        filter: brightness(80%);
+/*        filter: brightness(80%);*/
         margin: 0px 0px -0.5px -1px;
         text-shadow: 1px 1px 30px #E5E4E2;
     }

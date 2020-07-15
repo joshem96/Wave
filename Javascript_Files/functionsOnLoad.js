@@ -2,27 +2,26 @@
 //..............................................................................
 
     //DESKTOP FUNCTIONS ON LOAD
-    if (window.innerWidth>1100){
-
+    if (window.innerWidth>1100) {
+        comView = 0; //comview is off (cause desktop starts in myview)
+        
         //remove necessary adaptive classess
         soundControlContainer.classList.remove("adaptiveSoundControlContainer");
         formBox.classList.remove("adaptiveFormBox");
         movieModeContainer.classList.remove("adaptiveMovieModeContainer");
 
-        //for images that are bigger than window height even after having been resized by style, make their width 400px 
-        //turn img into array
-        //tempararily remove displayNone so you can access rendered dimensions of img[i]
-        img = Array.prototype.slice.call(img);
+        //for images that are bigger than window height even after having been resized by style, adjust again as neccersary
+        img = Array.prototype.slice.call(img); //turn img into array
         setTimeout(function(){ 
             fbTimelineView.classList.remove("displayNone");
             var imgMargin = "";
             var imgWidth = "";
             //function that resizes the images
-            function furtherAdjustImgSize(){
+            function furtherAdjustImgSize() {
                 for (var i = 0; i < img.length; i++) {
-                    //resize all images but pintrest images
+                    //resize all images except pintrest images
                     if (!img[i].classList.contains("pImg")){
-                        img[i].classList.remove("displayNone");
+                        img[i].classList.remove("displayNone"); //tempararily remove displayNone so you can access rendered dimensions of img[i]
                         img[i].style.visibility = "hidden";
                         if (img[i].height > photoViewHeight || img[i].height > window.innerHeight) {
                             img[i].style.width = imgWidth;
@@ -40,11 +39,11 @@
                 imgMargin = "25";
                 imgWidth = "450";
                 furtherAdjustImgSize();
-                //first image size adjust, width 400px
+                //second image size adjust (if previous was still too big), width 400px
                 imgMargin = "50";
                 imgWidth = "400";
                 furtherAdjustImgSize();
-                //first image size adjust, width 350px
+                //third image size adjust (if previous was still too big), width 350px
                 imgMargin = "75";
                 imgWidth = "350";
                 furtherAdjustImgSize();
@@ -68,31 +67,6 @@
                 imgWidth = "400";
                 furtherAdjustImgSize();
             }
-//            //run it again to get the images which are still too big
-//            for (var i = 0; i < img.length; i++) {
-//                if (img[i].height > photoViewHeight || img[i].height > window.innerHeight) {
-//                    if (!img[i].classList.contains("pImg")){
-//                        img[i].style.width = "400";
-//                        if (img[i].classList.contains("mainImg")){
-//                            img[i].style.marginRight = "50";
-//                            img[i].style.marginLeft = "50";
-//                        }
-//                    }
-//                }
-//            }
-            
-//            //run it again to get the images which are still too big
-//            for (var i = 0; i < img.length; i++) {
-//                if (img[i].height > photoViewHeight || img[i].height > window.innerHeight) {
-//                    if (!img[i].classList.contains("pImg")){
-//                        img[i].style.width = "350";
-//                        if (img[i].classList.contains("mainImg")){
-//                            img[i].style.marginRight = "75";
-//                            img[i].style.marginLeft = "75";
-//                        }
-//                    }
-//                }
-//            }
             //add displayNone back to appropriate images
             for (var i = 0; i < img.length; i++) {
                 if (img[i].style.visibility === "hidden") {
@@ -100,23 +74,27 @@
                     img[i].classList.add("displayNone");
                 }
             }
-            workingArray[mmx].classList.remove("displayNone");
+            //set up working array and display first image etc
+            myViewCounterReset(); // reset myView counters if checkbox count is 0 or first image of workingArray is displayed
+			workingArray = mainImgCyberPunk;
+			workingArray = Array.prototype.slice.call(workingArray);
+			workingArray[mmx].classList.remove("displayNone");
             fbTimelineView.classList.add("displayNone");
-        },100);
+            photoViewSection.style.visibility = "";
+        },200);
         
         photoViewSection.classList.remove("displayNone");  
         imageShuffle();//takes care of shuffling images, setting up workingArray and displaying imagess
-        /* set the height of photoview section so infoView can be centered between bottom of screenand bottom of page-head */
-        var infoPicCenter = document.querySelector(".infoPicCenter");
-        var pageHead = document.querySelector(".page-head");
+        
+        // set the height of photoview section so infoView can be centered between bottom of screen and bottom of page-head
         var photoViewHeight = window.innerHeight - pageHead.offsetHeight; // var photoViewHeight becomes height of photoView Section
-        infoPicCenter.style.height = photoViewHeight;
+        infoPicCenter.style.height = photoViewHeight; // photoviewheight will now always return the exact height of said height
     }
 
     //ADAPTIVE FUNCTIONS ON LOAD
     //.......................................................................
     else if (window.innerWidth<1100){
-
+        comView = 1; //comView is on (cause adaptive doesn't contain myView)
         currentView = "facebookView";
 
         workingArray = [];
@@ -129,10 +107,18 @@
         formBox.classList.remove("comViewOff");
         formBox.classList.add("comViewOn");
 
+        photoViewSection.style.visibility = "";
         photoViewSection.classList.remove("displayNone"); 
         
-        initScrollFunction();
+        initScrollFunction(); // checks what cb is checked, displays correct amount of images on screen etc
     }
 
+    //OTHER/GLOBAL
+    //.....................................................................
+        //delay arrows from showing on screen cause they glitch on load otherwise
+        setTimeout((function(){ 
+               wavefmLogo.classList.remove("visibilityNone");  
+        }),200);
 
+        arrowVisibilityCheck(); // dispays appropriate amount of arrows on either side of workingArray[mmx]
 

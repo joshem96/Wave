@@ -1,122 +1,120 @@
 /*********************************************************/
 /* header bar wrap/container style properties
 *********************************************************/
-.page-head {
-    align-items: center;  
-    align-self: center;
-    background: white;
-    display: flex; 
-    filter: brightness(85%);
-    flex: 1 0 auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 62.5px;   
-    padding: 2px 0px 2px 0px;
-    transition: filter .5s;
-    z-index: 1;
-    width: 100%;
-}
-.headerWrap {
-    z-index: 500;
-    position: fixed;
-}
-/* purple bar under the headerbar*/
-#waveLine {
-    align-self: flex-end;
-    background-size: cover;
-    filter: blur(1px);
-    height: 8px;
-    margin-top: 4px;
-    position: fixed;
-    object-fit: cover;
-    width: 100%;
-}
+    .page-head {
+        align-items: center;  
+        align-self: center;
+        background: white;
+        display: flex; 
+        filter: brightness(85%);
+        flex: 1 0 auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 62.5px;   
+        padding: 2px 0px 2px 0px;
+        transition: filter .5s;
+        z-index: 1;
+        width: 100%;
+    }
+    .headerWrap {
+        z-index: 500;
+        position: fixed;
+    }
+    /* purple bar under the headerbar*/
+    #waveLine {
+        align-self: flex-end;
+        background-size: cover;
+        filter: blur(1px);
+        height: 8px;
+        margin-top: 4px;
+        position: fixed;
+        object-fit: cover;
+        width: 100%;
+    }
 /********************************************************/
 /* website logo style properties
 ********************************************************/
-.waveFm {
-    align-self: center;
-    color: darkviolet;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 45px;
-    margin-left: 10px;
-    padding: 3px;
-    text-decoration: none;
-    text-shadow: 10px 10px 10px 10px;
-}
-.waveFm:active {
-    color:darkorchid;
-}
+    .waveFm {
+        align-self: center;
+        color: darkviolet;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 45px;
+        margin-left: 10px;
+        padding: 3px;
+        text-decoration: none;
+        text-shadow: 10px 10px 10px 10px;
+    }
+    .waveFm:active {
+        color:darkorchid;
+    }
 /**********************************************************/
 /*searchbox style properties
 **********************************************************/
-.searchBoxWrap {
-    z-index: 50;
-    margin: 0 1rem;  
-    flex-grow: 2; 
-    min-width: 5rem;
-    margin-left: 10px;
-	align-self: center;
-	width: 150px;
-}
-.search-box {
-    width: 100%;  
-    padding: .4rem;
-    background-color: darkslategrey;
-    opacity: 0.4;
-    margin-left: 5px;
-    border-radius: 10px;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-}
-
-
+    .searchBoxWrap {
+        z-index: 50;
+        margin: 0 1rem;  
+        flex-grow: 2; 
+        min-width: 5rem;
+        margin-left: 10px;
+        align-self: center;
+        width: 150px;
+    }
+    .search-box {
+        width: 100%;  
+        padding: .4rem;
+        background-color: darkslategrey;
+        opacity: 0.4;
+        margin-left: 5px;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Press Start 2P', cursive;
+    }
 /**********************************************************/
 /*global icon style properties (display icon in header bar, icons in info mode etc)
 *********************************************************/
-.iconWrap {
-    z-index: 30;
-    display: flex;
-    flex-direction: row;
-/*    align-items: center;*/
-}
-.displayImg { /* display button icon class */
-    width: 40.1px;
-    margin-top: 1.1px;
-}
-.buttonStyle { /* button style for moviemode and preference buttons */
-    background: transparent;
-    border-width: 0;
-    border-style: solid;
-    border-radius: 60px;
-    background-image: linear-gradient(-45deg, #6D6F7F, #61708b);
-    box-shadow: 0 1px 0 0 #4a4b56, 0 4px 4px -1px rgba(0, 0, 0, 0.6), 0 4px 6px 1px rgba(0, 0, 0, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.1) inset;
-    color: #E6EAEF;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    height: 28px;
-    justify-content: center;
-    line-height: 1.42;
-    margin: 6px;
-    padding: 0.8em 1.6em;
-    text-align: center;
-    transition: box-shadow 0.3s, transform 0.3s, color 0.3s, opacity 0.9s;
-    user-select: none;
-    vertical-align: bottom; 
-}
- 
-.buttonStyle:hover {
-    box-shadow:  0 1px 0 0 #4a4b56, 0 6px 4px -1px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.14) inset;
- } 
+    .iconWrap {
+        z-index: 30;
+        display: flex;
+        flex-direction: row;
+    /*    align-items: center;*/
+    }
+    .displayImg { /* display button icon class */
+        width: 40.1px;
+        margin-top: 1.1px;
+    }
+    .buttonStyle { /* button style for moviemode and preference buttons */
+        background: transparent;
+        border-width: 0;
+        border-style: solid;
+        border-radius: 60px;
+        background-image: linear-gradient(-45deg, #6D6F7F, #61708b);
+        box-shadow: 0 1px 0 0 #4a4b56, 0 4px 4px -1px rgba(0, 0, 0, 0.6), 0 4px 6px 1px rgba(0, 0, 0, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.1) inset;
+        color: #E6EAEF;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 28px;
+        justify-content: center;
+        line-height: 1.42;
+        margin: 6px;
+        padding: 0.8em 1.6em;
+        text-align: center;
+        transition: box-shadow 0.3s, transform 0.3s, color 0.3s, opacity 0.9s;
+        user-select: none;
+        vertical-align: bottom; 
+    }
 
-.buttonStyle:active {
-    box-shadow: 0 0px 0 0 #07288d, 0 3px 0 0 rgba(0, 0, 0, 0), 0 4px 16px rgba(0, 0, 0, 0), 0 1px 2px 1px rgba(0, 0, 0, 0.5) inset, 0 -18px 32px -2px rgba(255, 255, 255, 0.1) inset;
-    transition: 0s;
-/*    color: #082fa6;*/
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-.prefContainer, .soundControlContainer, .movieModeContainer {
-    top: 67px;
-    z-index: -500;
-}
+    .buttonStyle:hover {
+        box-shadow:  0 1px 0 0 #4a4b56, 0 6px 4px -1px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.14) inset;
+     } 
+
+    .buttonStyle:active {
+        box-shadow: 0 0px 0 0 #07288d, 0 3px 0 0 rgba(0, 0, 0, 0), 0 4px 16px rgba(0, 0, 0, 0), 0 1px 2px 1px rgba(0, 0, 0, 0.5) inset, 0 -18px 32px -2px rgba(255, 255, 255, 0.1) inset;
+        transition: 0s;
+    /*    color: #082fa6;*/
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    .prefContainer, .soundControlContainer, .movieModeContainer {
+        top: 67px;
+        z-index: -500;
+    }

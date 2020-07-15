@@ -4,121 +4,143 @@
 
 /*all view style properites
 **********************************************************/
-#MyPhotoSection { /* wrapper for entire photo view section (so including info mode)  */
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    position: relative;
-    z-index: 100;
-}
-#photoViewSection { /* photoviewsection covering only photo view modes */
-    z-index: -5000;
-}
-.arrow {
-    color: white;
-    font-size: 250px;
-    opacity: 0.2;
-    padding-left: 50px;
-    padding-right: 50px;
-    user-select: none;
-    width: auto;
-}
-.arrow:hover {
-    cursor: pointer;
-    opacity: 0.45;
-}
+    #MyPhotoSection { /* wrapper for entire photo view section (so including info mode)  */
+        align-items: center;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+    }
+    #photoViewSection { /* photoviewsection covering only photo view modes */
+        z-index: -5000;
+    }
+    .arrow {
+        color: white;
+        font-size: 250px;
+        opacity: 0.2;
+/*
+        padding-left: 50px;
+        padding-right: 50px;
+*/
+        user-select: none;
+        width: auto;
+    }
+    .arrow:hover {
+        cursor: pointer;
+    }
 
-.arrow:active {
-    opacity: 0.8;
-}
-.topPageArrowIcon, .arrow {
-    font-family: 'nunito',monospace;
-    font-weight: 900;
-}
+    .arrow:active {
+        opacity: 0.8;
+    }
+    .topPageArrowIcon, .arrow {
+/*
+        font-family: 'nunito',monospace;
+        font-weight: 900;
+*/
+    }
 
 /**********************************************************/
 /*myView style properites
 **********************************************************/
-#myView { /* entire myView wrap */
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    justify-content: space-evenly;
-    margin-top: 33.5px;
-    width: 100%
-}
-.mainImg { /* class for all images in myView */
-    align-self: center;
-    width: 500px;
-    z-index: 30;
-}
-#arrowOne { /* left arrow */
-    margin: 5px;
-    transform: scaleX(-1);
-    z-index: 500;
-}
-#arrowTwo { /* right arrow */
-    margin: 5px;
-}
-#arrowOne, #arrowTwo {
-    align-self: center;
-}
+    #myView { /* entire myView wrap */
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        justify-content: space-evenly;
+        margin-top: 33.5px;
+        width: 100%
+    }
+    .mainImg { /* class for all images in myView */
+        align-self: center;
+        width: 500px;
+        z-index: 30;
+    }
+    .myviewarrowcontainer {
+        align-self: center;
+        width: 180px;
+    }
+    #arrowOne { /* left arrow */
+        margin: 5px;
+        transform: scaleX(-1);
+        z-index: 500;
+    }
+    #arrowTwo { /* right arrow */
+        margin: 5px;
+    }
+    .myViewArrow {
+        align-self: center;
+		opacity: 0.2;
+        transition: width.18s;
+		width: 180px;
+    }
+	
+	.myViewArrow:hover {
+		opacity: 0.4;
+	}
+	.myViewArrow:active {
+		opacity: 0.8;
+	}
 /**********************************************************/
 /*comViewStyleProperties 
 **********************************************************/
-.fbTimeline {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-	margin-top: 3;
-    position: relative;
-    top: 68px;
-    width: 550px;
-    z-index: -30px;
-}
-.fbImg {
-    align-self: center;
-    margin: 5px;
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    z-index: -30px;
-}
-.pintrestView {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 68;
-}
-.pImg {
-    align-self: center;
-    margin: 3px;
-    position: relative;
-    z-index: -30px;
-    width: 300px;
-}
-.topPageArrowContainer { /* container/wrap for nav arrow that takes you back to top after stopping moviemode */
-    bottom: 0;
-    margin: 0px 50px -10px 0px;
-    position: fixed;
-    right: 0;
-}
-.topPageArrowIcon {
-    font-size: 7.5rem;
-    transform: rotate(-90deg);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.topPageArrowIcon:hover {
-    text-shadow: 1px 1px 30px #E5E4E2;
-    cursor: pointer;
-    margin:-3px;
-}
-.topPageArrowIcon:active {
-    filter: brightness(80%);
-    margin: 0px 0px -0.5px -1px;
-}
+    .fbTimeline {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 3;
+        position: relative;
+        top: 68px;
+        width: 550px;
+        z-index: -30px;
+    }
+    .fbImg {
+        align-self: center;
+        margin: 5px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        z-index: -30px;
+    }
+    .pintrestView {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 68;
+    }
+    .pImg {
+        align-self: center;
+        margin: 3px;
+        position: relative;
+        z-index: -30px;
+        width: 300px;
+    }
+    .topPageArrowContainer { /* container/wrap for nav arrow that takes you back to top after stopping moviemode */
+        bottom: 0;
+        margin: 0px 50px -10px 0px;
+        position: fixed;
+        right: 0;
+		opacity: 1;
+		transition: opacity .5s;
+    }
+    .topPageArrowIcon {
+		/* font-size: 7.5rem; */
+		margin-bottom: 30px;
+		opacity: 0.8;
+		transform: rotate(-90deg);
+		/* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+		width: 90px;
+    }
+    .topPageArrowIcon:hover {
+        text-shadow: 1px 1px 30px #E5E4E2;
+        cursor: pointer;
+        margin-bottom: 35px;
+/*		opacity: 0.6;*/
+    }
+    .topPageArrowIcon:active {
+		opacity: 0.8;
+    }

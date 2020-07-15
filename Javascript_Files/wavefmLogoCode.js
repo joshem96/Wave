@@ -1,17 +1,23 @@
 
-// NEW MAIN WAVEFM LOGO
+// MAIN WAVEFM LOGO (appears in top left corner)
 //.........................................................................................
 
+    //shuffle images and reinitialise current settings (same as refreshing facebook to see new feed)
     wavefmLogo.addEventListener("click",function(e) { 
-        if (formBox.classList.contains("comViewOn")){
+        if (comView === 1){
+            photoViewSection.style.visibility = "hidden";
             displayNoneAllImgs();
             initScrollFunction();
-        }else{
+            setTimeout(() => {
+                photoViewSection.style.visibility = "";    
+            }, 200);
+        }
+        else{
             imageShuffle();
         }
     });
 
-    //shuffle the images respective to their parent div
+    //shuffle the images (dependant on the view mode you're in)
     function imageShuffle(e){
 
         if (!photoViewSection.classList.contains("displayNone")){
@@ -41,26 +47,16 @@
             //MYVIEW IMG SHUFFLE 
             //basically: displayNone all images => clear workingArray => shuffle images => assign shuffled imgs to variables => create new workingArray and display mmx
             if (currentView === "myView"){
-//
-//                    if (workingArray.length>1){
-//
-//                        workingArray[mmx].classList.add("displayNone");
-//                    }
-
+                //set all images to display: none
                 displayNoneAllImgs();
-
                 // clear working array
                 workingArray = []
-
                 //reset image counters to default
-                counterDefault();
-
+                myViewCounterReset();
                 //shuffle HTML imgs
                 for (var i = myViewImageWrapper.children.length; i >= 0; i--){
-
                     myViewImageWrapper.appendChild(myViewImageWrapper.children[Math.random() * i | 0]);
                 }
-
                 //add newly shuffled html images to respective DOM variables
                 mainImgCyberPunk = document.querySelectorAll(".mainImgCyberPunk");
                 mainImgCyberPunk = Array.prototype.slice.call(mainImgCyberPunk);
@@ -68,36 +64,22 @@
                 mainImgRetro = Array.prototype.slice.call(mainImgRetro);
                 mainImgVaporWave = document.querySelectorAll(".mainImgVaporWave");
                 mainImgVaporWave = Array.prototype.slice.call(mainImgVaporWave);
-
                 //checks if in search mode, if so run searchFunction instead of myViewInit
                 if (searchWord.length>1){
-
                     searchFunction();
                 }
                 //select all cb's that are checked and display their images
                 else{
                     myViewInit();
                 }
-
                 if (workingArray.length>1){
                     workingArray[mmx].classList.remove("displayNone");
                 }
             }
-        }else{
-            //IF CLICKED WHEN INFOVIEW IS DISPLAYED
-            //INFO-VIEW => DISPLAYVIEW (BACK TO WHATEVER VIEW WAS LAST DISPLAYED(EG MYVIEW))
-            if((!infoPicView.classList.contains("displayNone")) && photoViewSection.classList.contains("displayNone")){
-
-                infoPicView.classList.add("displayNone"); 		              
-                photoViewSection.classList.remove("displayNone");
-            }                
         }
-
         //scroll to top of screen
         if (currentView === "pintrestView" || currentView === "facebookView"){
-
             scrollToTop();
         }
-
     }
 

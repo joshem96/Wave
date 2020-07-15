@@ -1,78 +1,78 @@
 /**********************************************************/
 /*movie mode style properties
 **********************************************************/
-.movieModeContainer { /* container/wrap for moviemode control section */
-    align-content:stretch;
-    align-self: flex-end;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 15px 0px 0px 15px;
-    border-top: transparent;
-    display: inline-flex;
-    filter: brightness(85%);
-    float: right;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7px;
-    height:62px;
-    overflow: auto;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    text-transform: uppercase;
-}
-.moviemodeImg {
-    border: 2.0px solid black;
-    border-radius: 7px;
-    height: 39px;
-    width: 40.6px;
-}
-.radioContainer {
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: -10px;
-    width: 100px;
-}
-.radioContainer input {
-    opacity: 0;
-    padding: 5px;
-    margin: 0 auto;
-}
-/* When the radio button is checked */
-.radioContainer input:checked ~ .radio {
-    background-color: forestgreen;
-}
-/* Show the indicator (dot/circle) when checked */
-.radioContainer input:checked ~ .radio:after {
-    display: block;
-}
-.radio {
-  background-color: #eee;
-  border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.4);
-  cursor: pointer;
-  display: flex;
-  height: 25px;
-  margin-top: 3;
-  width: 25px;
-}
-.radio:hover {/* On hover, add a grey background color */
-    filter: brightness(90%);
-}
-.movieModeDivider { /* purple line between toggle and speed select radio buttons */
-    border: 2px solid #CD69C9;
-}
-.movieModeToggleWrap {
-    align-self: center;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-.powerSymbol { /* symbol inside of on/off button */
-  width: 20px;
-  height: 20px;
-}
-.powerSymbol:active {
-opacity: .6;
-}
+    .movieModeContainer { /* container/wrap for moviemode control section */
+        align-content:stretch;
+        align-self: flex-end;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 15px 0px 0px 15px;
+        border-top: transparent;
+        display: inline-flex;
+        filter: brightness(85%);
+        float: right;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 7px;
+        height:62px;
+        overflow: auto;
+        overflow: hidden;
+        position: fixed;
+        right: 0;
+        text-transform: uppercase;
+    }
+    .moviemodeImg {
+        border: 2.0px solid black;
+        border-radius: 7px;
+        height: 39px;
+        width: 40.6px;
+    }
+    .radioContainer {
+        display: flex;
+        justify-content: space-around;
+        align-self: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: -10px;
+        width: 100px;
+    }
+    .radioContainer input {
+        opacity: 0;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    /* When the radio button is checked */
+    .radioContainer input:checked ~ .radio {
+        background-color: forestgreen;
+    }
+    /* Show the indicator (dot/circle) when checked */
+    .radioContainer input:checked ~ .radio:after {
+        display: block;
+    }
+    .radio {
+      background-color: #eee;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.4);
+      cursor: pointer;
+      display: flex;
+      height: 25px;
+      margin-top: 3;
+      width: 25px;
+    }
+    .radio:hover {/* On hover, add a grey background color */
+        filter: brightness(90%);
+    }
+    .movieModeDivider { /* purple line between toggle and speed select radio buttons */
+        border: 2px solid #CD69C9;
+    }
+    .movieModeToggleWrap {
+        align-self: center;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .powerSymbol { /* symbol inside of on/off button */
+      width: 20px;
+      height: 20px;
+    }
+    .powerSymbol:active {
+    opacity: .6;
+    }

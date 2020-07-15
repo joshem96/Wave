@@ -1,93 +1,93 @@
 /**********************************************************/
 /*SOUND CONTROL style properties
 **********************************************************/
-.soundControlContainer {
-    align-content:stretch;
-    align-self: flex-end;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 15px 0px 0px 15px;
-    border-top: transparent;
-    display: inline-flex;
-    float: right;
-    filter: brightness(85%);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7px;
-    overflow: auto;
-    position: fixed;
-    right: 0;
-    text-transform: uppercase;
-/*    z-index: 60; */
-}
-.soundExtraMargin { /* gives the container a little more breathing space */
-    margin-bottom: 3px;
-	margin-top: 8px;
-}
-.soundControlIcon {
-    background-color: darkgrey;
-    border: 3px solid black;
-    border-radius: 8px;
-    height: 37px;
-    width: 37px;
-}
-.soundControlWrap {
-    display: flex;
-}
-.sfxOnIconDesktop,.sfxMuteIconDesktop { /* style for sfx icon on/mute */
-	left: 0px; 
-    margin-top: 4px;
-	margin-right: 10px;
-    position: static;
-    width: 50px;
-    z-index: 50;
-}
-.musicOnIconDesktop,.musicMuteIconDesktop { /* style for music icon on/mute */
-    margin-left: 5px;
-	margin-left: 10px;
-	margin-top: -2px;
-    position: static;
-    width: 50px;
-    z-index: 50;
-}
-.soundOnIconDesktop:hover,.soundMuteIconDesktop:hover {
-    cursor: pointer
-}
-.soundLevelContainer { /* wrap/container of where the user can change the volume */
-	display: flex;
-	height: 18px;
-	justify-content: space-around;
-    margin-bottom: 3.1px;
-	width: 50px;
-}
-.sfxLevelContainer { /* container for the sfx volume control */
-	margin-top: 7.5px;
-	margin-right: 10px;
-}
-.musicLevelContainer { /* container for the music volume control */
-	margin-left: 10px;
-	margin-top: 2px;
-}
-.soundLevelBar { /* style for the individual bars that make up the volume control */
-    border-radius: 2px;
-    cursor: pointer;
-    width: 6px;
-}
-.soundLevelBar:hover {
-    filter: brightness(90%);
-}
-.barOff { /* individual sound level bar off */
-    background-color: #a9a9a9;
-}
-.barOn { /* individual sound level bar on */
-    background-color: forestgreen;
-}
-.soundIconDesktop {
-	margin: 5px 0px 4px 0px;
-}
-.adaptiveSoundControl {
-    width: 37px;
-    height: 36px;
-}
-.soundIcon {
-    cursor: pointer;
-}
+    .soundControlContainer {
+        align-content:stretch;
+        align-self: flex-end;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 15px 0px 0px 15px;
+        border-top: transparent;
+        display: inline-flex;
+        float: right;
+        filter: brightness(85%);
+        font-family: 'Press Start 2P', cursive;
+        font-size: 7px;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        text-transform: uppercase;
+    /*    z-index: 60; */
+    }
+    .soundExtraMargin { /* gives the container a little more breathing space */
+        margin-bottom: 3px;
+        margin-top: 8px;
+    }
+    .soundControlIcon {
+        background-color: darkgrey;
+        border: 3px solid black;
+        border-radius: 8px;
+        height: 37px;
+        width: 37px;
+    }
+    .soundControlWrap {
+        display: flex;
+    }
+    .sfxOnIconDesktop,.sfxMuteIconDesktop { /* style for sfx icon on/mute */
+        left: 0px; 
+        margin-top: 4px;
+        margin-right: 10px;
+        position: static;
+        width: 50px;
+        z-index: 50;
+    }
+    .musicOnIconDesktop,.musicMuteIconDesktop { /* style for music icon on/mute */
+        margin-left: 5px;
+        margin-left: 10px;
+        margin-top: -2px;
+        position: static;
+        width: 50px;
+        z-index: 50;
+    }
+    .soundOnIconDesktop:hover,.soundMuteIconDesktop:hover {
+        cursor: pointer
+    }
+    .soundLevelContainer { /* wrap/container of where the user can change the volume */
+        display: flex;
+        height: 18px;
+        justify-content: space-around;
+        margin-bottom: 3.1px;
+        width: 50px;
+    }
+    .sfxLevelContainer { /* container for the sfx volume control */
+        margin-top: 7.5px;
+        margin-right: 10px;
+    }
+    .musicLevelContainer { /* container for the music volume control */
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+    .soundLevelBar { /* style for the individual bars that make up the volume control */
+        border-radius: 2px;
+        cursor: pointer;
+        width: 6px;
+    }
+    .soundLevelBar:hover {
+        filter: brightness(90%);
+    }
+    .barOff { /* individual sound level bar off */
+        background-color: #a9a9a9;
+    }
+    .barOn { /* individual sound level bar on */
+        background-color: forestgreen;
+    }
+    .soundIconDesktop {
+        margin: 5px 0px 4px 0px;
+    }
+    .adaptiveSoundControl {
+        width: 37px;
+        height: 36px;
+    }
+    .soundIcon {
+        cursor: pointer;
+    }
