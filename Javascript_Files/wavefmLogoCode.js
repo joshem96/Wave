@@ -11,6 +11,9 @@
             setTimeout(() => {
                 photoViewSection.style.visibility = "";    
             }, 200);
+            if (searchWord.length>1){
+                searchFunction();
+            }
         }
         else{
             imageShuffle();
@@ -47,6 +50,10 @@
             //MYVIEW IMG SHUFFLE 
             //basically: displayNone all images => clear workingArray => shuffle images => assign shuffled imgs to variables => create new workingArray and display mmx
             if (currentView === "myView"){
+                photoViewSection.style.visibility = "hidden";
+                setTimeout(() => {
+                    photoViewSection.style.visibility = "";    
+                }, 200);
                 //set all images to display: none
                 displayNoneAllImgs();
                 // clear working array

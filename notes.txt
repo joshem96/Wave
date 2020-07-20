@@ -1,37 +1,10 @@
-RECENTLY FIXED AND NOT COMMITED
-- shuffle images in comview bug
-- final little errors in comview pref code  (undefined images trying to get through)
-- removing arrow code when at start or end of workingArray
-- also made arrow font size go smaller then back to normal when clicked
-- added in 2 new vaporwave images
-- changed arrow to image and cleaned up the styling properties (incl hover, active etc)
-- Adaptive mode; 
-	- added display none temporarily after display btn pressed to hide imgs shuffling
-- cleaned remaining code (javascript)
-	- globalVariables&Defaults.js
-	- globalFunctions.js
-	- functionsOnLoad.js
-	- displayButtonCode.js
-	- ImgLoadScript.js
-	- InfoAboutCode.js
-	- movieModeCode.js
-	- arrowCode.js
-	- searchBarCode.js
-	- preferencesCode.js 
-	- wavefmLogoCode.js 
-	- tabDisplayCode.js
-	- soundCode.js
-- made nav arrow appear on scroll down, but disappear when you scroll up and added a transition effect
-- fixed nav arrow bug of appearing on first scroll after clicking displayButton 
-- put displayButton sound on info mode button and also add quickclick(?) sound to exit button in info view
 
 CURRENT 2.07.2020
-- put through linter?
+
 JAVASSCRIPT
-BUGS
 - continue setting up git for mac (its installed, just gotta find wave)
 - clean and organise js files 
-	- make a README file explaining workingArray etc 
+	- continue making a README file explaining workingArray etc 
 
 
 HTML
