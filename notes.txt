@@ -1,12 +1,5 @@
-
-CURRENT 2.07.2020
-
-JAVASSCRIPT
-- continue setting up git for mac (its installed, just gotta find wave)
-- clean and organise js files 
-	- continue making a README file explaining workingArray etc 
-
-
+INFO:
+- git remote it called browser
 HTML
 add further semantics
 

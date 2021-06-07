@@ -19,7 +19,7 @@
         filter: brightness(85%);
         height: 500px;
         margin: 0 auto;
-        max-width: 900px;
+        width: 900px;
         overflow: auto;
         overflow: hidden;
         position: relative;
@@ -165,12 +165,13 @@
         position: relative;
         top: 0;
         text-align: center;
+        width: 900px;
     }
     .contactFont { /*for word "contact" */
         font-size: 7em;
         margin: 0;
     }
-    #emailLinkWords { /*for words before m email link "feel free to contact us at.." */
+    .emailLinkWords { /*for words before m email link "feel free to contact us at.." */
         font-size: 3em;
     }
     #emailLink { /*for word website email link */
@@ -191,12 +192,13 @@
     }
     #comingSoon { /* for "coming soon" which displays on hover over social media icons*/
         align-self: center;
+        cursor: default !important;
         opacity: 0.0;
         position: absolute;
     }
     #comingSoon:hover {
         opacity: 0.8;
-        cursor: context-menu;
+        /*cursor: context-menu;*/
     }
     .socialMediaIcon {
         opacity: 0.3;
