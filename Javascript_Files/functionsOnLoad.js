@@ -118,6 +118,7 @@
         //delay arrows from showing on screen cause they glitch on load otherwise
         setTimeout((function(){ 
                wavefmLogo.classList.remove("visibilityNone");  
+               sfxIconFunction();
         }),200);
 
         arrowVisibilityCheck(); // dispays appropriate amount of arrows on either side of workingArray[mmx]
